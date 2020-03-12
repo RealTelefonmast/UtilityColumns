@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+   <name>Utility Columns</name>
+   <author>NEPH, Maxim(Telefonmast)</author>
+   <supportedVersions>
+      <li>1.1</li>
+   </supportedVersions>
+   <packageId>nephlite.orbitaltradecolumn</packageId>
+   <description>
+Adds 4 types of utility columns.
+All columns hold up the roof, beware of possible roof collapse when moving.
+</description>
+</ModMetaData>

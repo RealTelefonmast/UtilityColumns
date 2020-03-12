@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Assemblies\RimWorldColumns.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Assemblies\RimWorldColumns.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.csprojAssemblyReference.cache
