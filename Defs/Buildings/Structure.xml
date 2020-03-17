@@ -28,7 +28,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>2500</WorkToBuild>
+      <WorkToBuild>1500</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>15</Mass>
     </statBases>
@@ -119,7 +119,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>2500</WorkToBuild>
+      <WorkToBuild>1500</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Beauty>25</Beauty>
       <Mass>15</Mass>
@@ -226,7 +226,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>2500</WorkToBuild>
+      <WorkToBuild>1500</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>15</Mass>
 	  <Beauty>15</Beauty>
@@ -319,8 +319,8 @@
 			<li>BuildingsSecurity</li>
 		</thingCategories>
 		<statBases>
-			<MaxHitPoints>200</MaxHitPoints>
-			<WorkToBuild>5000</WorkToBuild>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
 			<Beauty>-25</Beauty>
@@ -416,5 +416,108 @@
 	</ThingDef>
 
 
-
+  <ThingDef ParentName="BuildingBase">
+    <defName>GraveColumnMod</defName>
+    <label>sanctuary column</label>
+    <description>An ornamented burial column for the honored dead. designed to keep a dead person for many years, and lights the area.</description>
+    <thingClass>Building_Sarcophagus</thingClass>
+    <graphicData>
+			<drawSize>(2.5,2.5)</drawSize>
+			<texPath>Buildings/GraColumn_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+    </graphicData>
+	<uiIconPath>Buildings/GraColumn</uiIconPath>
+    <size>(2,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+      <preventDeteriorationInside>false</preventDeteriorationInside>
+      <haulToContainerDuration>750</haulToContainerDuration>
+      <fullGraveGraphicData>
+			<drawSize>(2,2)</drawSize>
+			<texPath>Buildings/GraColumn_Overlay</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+      </fullGraveGraphicData>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>AllowCorpsesStranger</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>50</Beauty>
+    </statBases>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+      <li>ITab_Art</li>
+      <li>ITab_ContentsCasket</li>
+    </inspectorTabs>
+    <comps>
+		<li Class="CompProperties_Glower">
+			<glowRadius>5</glowRadius>
+			<glowColor>(252,187,113,0)</glowColor>
+		</li>
+		<li Class="CompProperties_FireOverlay">
+			<fireSize>0.25</fireSize>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+			<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+			<mustBeFullGrave>true</mustBeFullGrave>
+		</li>
+		<li Class="CompProperties_AssignableToPawn">
+			<drawAssignmentOverlay>true</drawAssignmentOverlay>
+			<compClass>CompAssignableToPawn_Grave</compClass>
+		</li>
+    </comps>
+    <costStuffCount>150</costStuffCount>
+	<pathCost>25</pathCost>
+	<passability>PassThroughOnly</passability>
+	<designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+	<stealable>false</stealable>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+      <li>OrbitalTradeColumnRes</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<holdsRoof>true</holdsRoof>
+	<canOverlapZones>true</canOverlapZones>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+  
 </Defs>
