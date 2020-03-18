@@ -28,7 +28,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>1500</WorkToBuild>
+      <WorkToBuild>3000</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>15</Mass>
     </statBases>
@@ -119,7 +119,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>1500</WorkToBuild>
+      <WorkToBuild>3000</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Beauty>25</Beauty>
       <Mass>15</Mass>
@@ -226,7 +226,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>1500</WorkToBuild>
+      <WorkToBuild>3000</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>15</Mass>
 	  <Beauty>15</Beauty>
@@ -320,7 +320,7 @@
 		</thingCategories>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>2000</WorkToBuild>
+			<WorkToBuild>3000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
 			<Beauty>-25</Beauty>
@@ -330,7 +330,7 @@
 		<fillPercent>0.25</fillPercent>
 		<costList>
 			<Steel>75</Steel>
-			<Plasteel>15</Plasteel>
+			<Plasteel>10</Plasteel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<comps>
@@ -359,14 +359,14 @@
 				<basePowerConsumption>35</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Refuelable">
-				<fuelLabel>Cluster fragments</fuelLabel>
-				<fuelGizmoLabel>Cluster fragments</fuelGizmoLabel>
+				<fuelLabel>cluster fragments</fuelLabel>
+				<fuelGizmoLabel>cluster fragments</fuelGizmoLabel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Steel</li>
 					</thingDefs>
 				</fuelFilter>
-				<fuelCapacity>25</fuelCapacity>
+				<fuelCapacity>15</fuelCapacity>
 				<initialFuelPercent>0</initialFuelPercent>
 				<autoRefuelPercent>0.9</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
@@ -408,8 +408,8 @@
 			<li Class="RimWorldColumns.ColumnExtension">
 				<radius>4.9</radius>
 				<consumptionPercent>1</consumptionPercent>
-				<explosionDamage>50</explosionDamage>
-				<detonationDelay>50</detonationDelay>
+				<explosionDamage>55</explosionDamage>
+				<detonationDelay>55</detonationDelay>
 				<damageType>ClaymoreBomb</damageType>
 			</li>
 		</modExtensions>
@@ -418,8 +418,8 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>GraveColumnMod</defName>
-    <label>sanctuary column</label>
-    <description>An ornamented burial column for the honored dead. designed to keep a dead person for many years, and lights the area.</description>
+    <label>sacred column</label>
+    <description>An ornamented burial column for the honored dead. Designed to keep a dead person for many years.</description>
     <thingClass>Building_Sarcophagus</thingClass>
     <graphicData>
 			<drawSize>(2.5,2.5)</drawSize>
@@ -443,7 +443,7 @@
       <preventDeteriorationInside>false</preventDeteriorationInside>
       <haulToContainerDuration>750</haulToContainerDuration>
       <fullGraveGraphicData>
-			<drawSize>(2,2)</drawSize>
+			<drawSize>(2.5,2.5)</drawSize>
 			<texPath>Buildings/GraColumn_Overlay</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<damageData>
@@ -470,8 +470,8 @@
       </defaultStorageSettings>
     </building>
     <statBases>
-      <WorkToBuild>4000</WorkToBuild>
-      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
       <Flammability>0</Flammability>
       <Beauty>50</Beauty>
     </statBases>
@@ -484,13 +484,11 @@
       <li>ITab_ContentsCasket</li>
     </inspectorTabs>
     <comps>
-		<li Class="CompProperties_Glower">
-			<glowRadius>5</glowRadius>
-			<glowColor>(252,187,113,0)</glowColor>
-		</li>
-		<li Class="CompProperties_FireOverlay">
-			<fireSize>0.25</fireSize>
-		</li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusher</compClass>
+        <heatPerSecond>-10</heatPerSecond>
+        <heatPushMinTemperature>1</heatPushMinTemperature>
+      </li>
 		<li>
 			<compClass>CompQuality</compClass>
 		</li>
@@ -511,10 +509,9 @@
     <rotatable>false</rotatable>
 	<stealable>false</stealable>
     <researchPrerequisites>
-      <li>ComplexFurniture</li>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
-	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	<holdsRoof>true</holdsRoof>
 	<canOverlapZones>true</canOverlapZones>
 	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>

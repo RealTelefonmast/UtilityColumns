@@ -18,4 +18,7 @@
   <DetColumnMod.comps.CompRefuelable.fuelLabel>장전된 파편</DetColumnMod.comps.CompRefuelable.fuelLabel>
   <DetColumnMod.comps.CompRefuelable.outOfFuelMessage>재장전 필요</DetColumnMod.comps.CompRefuelable.outOfFuelMessage>
 
+  <GraveColumnMod.label>성소 기둥</GraveColumnMod.label>
+  <GraveColumnMod.description>영예롭게 죽은 자들을 기리기 위한 장식 기둥입니다. 지붕을 지탱하고, 시신을 썩지 않게 보존할 수 있습니다.</GraveColumnMod.description>
+
 </LanguageData>
