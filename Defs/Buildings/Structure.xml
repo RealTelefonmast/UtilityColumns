@@ -81,6 +81,7 @@
     </placeWorkers>
     <building>
       <expandHomeArea>false</expandHomeArea>
+	  <ai_combatDangerous>true</ai_combatDangerous>
     </building>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
@@ -129,6 +130,7 @@
     <fillPercent>0.25</fillPercent>
     <costList>
       <Steel>150</Steel>
+	  <Plasteel>5</Plasteel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
@@ -155,7 +157,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>3500</basePowerConsumption>
+        <basePowerConsumption>3300</basePowerConsumption>
       </li>
       <li Class="CompProperties_Schedule">
         <!-- Match plant growing times -->
@@ -170,7 +172,7 @@
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusher</compClass>
-        <heatPerSecond>20</heatPerSecond>
+        <heatPerSecond>30</heatPerSecond>
         <heatPushMaxTemperature>2</heatPushMaxTemperature>
       </li>
     </comps>
@@ -187,11 +189,12 @@
     <stealable>false</stealable>
     <building>
       <expandHomeArea>false</expandHomeArea>
+	  <ai_combatDangerous>true</ai_combatDangerous>
     </building>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
     <fertility>0</fertility>
@@ -202,7 +205,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>IceColumnMod</defName>
     <label>frozen column</label>
-    <description>A utility column, acts like a cooler, keeps the room at -8°C and emits blue light, perfect for fridges.</description>
+    <description>A utility column, acts like a cooler, keeps the room at -15°C and emits blue light, perfect for fridges.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
@@ -236,6 +239,7 @@
     <fillPercent>0.25</fillPercent>
     <costList>
       <Steel>150</Steel>
+	  <Plasteel>5</Plasteel>
       <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
     <comps>
@@ -261,12 +265,12 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>500</basePowerConsumption>
+        <basePowerConsumption>550</basePowerConsumption>
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>-40</heatPerSecond>
-        <heatPushMinTemperature>-8</heatPushMinTemperature>
+        <heatPerSecond>-38</heatPerSecond>
+        <heatPushMinTemperature>-15</heatPushMinTemperature>
       </li>
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -281,11 +285,12 @@
     <stealable>false</stealable>
     <building>
       <expandHomeArea>false</expandHomeArea>
+	  <ai_combatDangerous>true</ai_combatDangerous>
     </building>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
     <fertility>0</fertility>
@@ -330,7 +335,7 @@
 		<fillPercent>0.25</fillPercent>
 		<costList>
 			<Steel>75</Steel>
-			<Plasteel>10</Plasteel>
+			<Plasteel>5</Plasteel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<comps>
@@ -348,16 +353,16 @@
 							<graphicClass>Graphic_Single</graphicClass>
 							<shaderType>CutoutComplex</shaderType>
 						</data>
-						<needsPower>false</needsPower>
+						<needsPower>true</needsPower>
 					</li>
 				</overlays>
 			</li>
 			<li Class="CompProperties_Flickable"/>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<shortCircuitInRain>false</shortCircuitInRain>
-				<basePowerConsumption>35</basePowerConsumption>
-			</li>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>true</shortCircuitInRain>
+			<basePowerConsumption>25</basePowerConsumption>
+		</li>
 			<li Class="CompProperties_Refuelable">
 				<fuelLabel>cluster fragments</fuelLabel>
 				<fuelGizmoLabel>cluster fragments</fuelGizmoLabel>
@@ -439,6 +444,7 @@
     <altitudeLayer>Building</altitudeLayer>
     <building>
       <expandHomeArea>false</expandHomeArea>
+	  <ai_combatDangerous>true</ai_combatDangerous>
       <ai_chillDestination>false</ai_chillDestination>
       <preventDeteriorationInside>false</preventDeteriorationInside>
       <haulToContainerDuration>750</haulToContainerDuration>

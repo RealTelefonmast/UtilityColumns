@@ -4,7 +4,7 @@
   <ResearchProjectDef>
     <defName>OrbitalTradeColumnRes</defName>
     <label>utiltity columns</label>
-    <description>Unlocks Orbital, Sun and Frozen column.</description>
+    <description>Unlocks orbital, sun, frozen, sacred column.</description>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
