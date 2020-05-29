@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ThingDef ParentName="BuildingBase">
+    <defName>LightColumnMod</defName>
+    <label>light column</label>
+    <description>A simple mobile column, just lights the area.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <drawSize>(1.25,1.25)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <texPath>Buildings/LLColumn_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+	<uiIconPath>Buildings/LLColumn</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.05</Flammability>
+      <Mass>10</Mass>
+      <Beauty>15</Beauty>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <comps>
+		<li Class="RimWorldColumns.CompProperties_Overlays">
+			<overlays>
+				<li>
+					<data>
+						<drawSize>(1.25,1.25)</drawSize>
+						<drawOffset>(0,0,0.2)</drawOffset>
+						<texPath>Buildings/LLColumn_Overlay</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<shaderType>MoteGlow</shaderType>
+					</data>
+					<needsPower>true</needsPower>
+				</li>
+			</overlays>
+		</li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Forbiddable"/>
+		<li Class="CompProperties_Glower">
+			<glowRadius>11</glowRadius>
+			<glowColor>(217,217,208,0)</glowColor>
+		</li>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>true</shortCircuitInRain>
+			<basePowerConsumption>15</basePowerConsumption>
+		</li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+	<killedLeavings>
+		<ChunkSlagSteel>1</ChunkSlagSteel>
+	</killedLeavings>
+    <pathCost>25</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+	<stealable>false</stealable>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <ai_combatDangerous>false</ai_combatDangerous>
+    </building>
+    <researchPrerequisites>
+      <li>OrbitalTradeColumnRes</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <holdsRoof>true</holdsRoof>
+    <canOverlapZones>true</canOverlapZones>
+    <fertility>0</fertility>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
 
   <ThingDef ParentName="BuildingBase">
     <defName>OrbitalTradeColumnMod</defName>
@@ -62,13 +149,13 @@
 			<basePowerConsumption>60</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Glower">
-			<glowRadius>11</glowRadius>
+			<glowRadius>10</glowRadius>
 			<glowColor>(217,217,208,0)</glowColor>
 		</li>
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	<killedLeavings>
-		<ChunkSlagSteel>2</ChunkSlagSteel>
+		<ChunkSlagSteel>1</ChunkSlagSteel>
 		<ComponentIndustrial>1</ComponentIndustrial>
 	</killedLeavings>
     <pathCost>25</pathCost>
@@ -179,7 +266,7 @@
     <specialDisplayRadius>6.9</specialDisplayRadius>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	<killedLeavings>
-		<ChunkSlagSteel>2</ChunkSlagSteel>
+		<ChunkSlagSteel>1</ChunkSlagSteel>
 		<ComponentIndustrial>2</ComponentIndustrial>
 	</killedLeavings>
     <pathCost>25</pathCost>
@@ -275,7 +362,7 @@
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	<killedLeavings>
-		<ChunkSlagSteel>2</ChunkSlagSteel>
+		<ChunkSlagSteel>1</ChunkSlagSteel>
 		<ComponentIndustrial>2</ComponentIndustrial>
 	</killedLeavings>
     <pathCost>25</pathCost>
@@ -360,7 +447,7 @@
 			<li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
-			<shortCircuitInRain>true</shortCircuitInRain>
+			<shortCircuitInRain>false</shortCircuitInRain>
 			<basePowerConsumption>25</basePowerConsumption>
 		</li>
 			<li Class="CompProperties_Refuelable">
@@ -386,7 +473,7 @@
 		<specialDisplayRadius>4.9</specialDisplayRadius>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
-			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</killedLeavings>
 		<pathCost>25</pathCost>
@@ -424,7 +511,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>GraveColumnMod</defName>
     <label>sacred column</label>
-    <description>An ornamented burial column for the honored dead. Designed to keep a dead person for many years.</description>
+    <description>An ornamented burial column for the honored dead. Designed to keep a dead person for many years.\n\nAltman be praised.</description>
     <thingClass>Building_Sarcophagus</thingClass>
     <graphicData>
 			<drawSize>(2.5,2.5)</drawSize>
@@ -492,7 +579,7 @@
     <comps>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusher</compClass>
-        <heatPerSecond>-10</heatPerSecond>
+        <heatPerSecond>-5</heatPerSecond>
         <heatPushMinTemperature>1</heatPushMinTemperature>
       </li>
 		<li>
@@ -517,7 +604,7 @@
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
-	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 	<holdsRoof>true</holdsRoof>
 	<canOverlapZones>true</canOverlapZones>
 	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
