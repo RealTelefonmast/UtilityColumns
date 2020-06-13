@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OrbitalTradeColumnRes.label>вспомогательные колонны</OrbitalTradeColumnRes.label>
+  <OrbitalTradeColumnRes.description>Разблокирует орбитальную, солнечную, световую, замороженную и священную колонны.</OrbitalTradeColumnRes.description>
+
+  <DetColumnRes.label>кассетная колонна</DetColumnRes.label>
+  <DetColumnRes.description>Разблокирует касетную колонну для защиты базы.</DetColumnRes.description>
+  
+</LanguageData>
