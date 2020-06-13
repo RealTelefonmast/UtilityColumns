@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LightColumnMod.label>световая колонна</LightColumnMod.label>
+  <LightColumnMod.description>Простая мобильная колонна, просто освещающая территорию.</LightColumnMod.description>
+
+  <OrbitalTradeColumnMod.label>орбитальная торговая колонна</OrbitalTradeColumnMod.label>
+  <OrbitalTradeColumnMod.description>Вспомогательная колонна действует как орбитальный торговый маяк и освещает территорию, идеально подходящую для складов.</OrbitalTradeColumnMod.description>
+
+  <SunColumnMod.label>солнечная колонна</SunColumnMod.label>
+  <SunColumnMod.description>Вспомогательная колонна, действует как солнечная лампа и сохраняет вашу комнату в тепле, идеально подходит для теплиц. Автоматически отключается ночью.</SunColumnMod.description>
+  <SunColumnMod.comps.CompSchedule.offMessage>Выключен на время сна растений</SunColumnMod.comps.CompSchedule.offMessage>
+
+  <IceColumnMod.label>замороженная колонна</IceColumnMod.label>
+  <IceColumnMod.description>Вспомогательная колонка действует как кулер, поддерживает температуру в помещении при -15 ° C и излучает синий свет, что идеально подходит для холодильников.</IceColumnMod.description>
+
+  <DetColumnMod.label>кассетная колонна</DetColumnMod.label>
+  <DetColumnMod.description>Продвинутая колонна для защиты базы. Обнаружив врага в любом направлении, он детонирует взрывоопасный кластерный заряд в том же направлении. Может быть перезагружен.</DetColumnMod.description>
+
+  <DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>фрагменты кассеты</DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>
+  <DetColumnMod.comps.CompRefuelable.fuelLabel>фрагменты кассеты</DetColumnMod.comps.CompRefuelable.fuelLabel>
+  <DetColumnMod.comps.CompRefuelable.outOfFuelMessage>Не может взорваться: нужны боеприпасы</DetColumnMod.comps.CompRefuelable.outOfFuelMessage>
+
+  <GraveColumnMod.label>священная колонна</GraveColumnMod.label>
+  <GraveColumnMod.description>Украшенная могильная колонна для почитаемых мертвецов. Предназначен для содержания мертвого человека на протяжении многих лет.</GraveColumnMod.description>
+
+</LanguageData>
