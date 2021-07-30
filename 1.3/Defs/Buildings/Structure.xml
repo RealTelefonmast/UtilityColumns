@@ -71,7 +71,7 @@
 	</killedLeavings>
     <pathCost>25</pathCost>
     <passability>PassThroughOnly</passability>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>Furniture</designationCategory>
     <rotatable>false</rotatable>
 	<stealable>false</stealable>
     <building>
@@ -87,6 +87,95 @@
     <fertility>0</fertility>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
+  
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>DarkColumnMod</defName>
+    <label>dark column</label>
+    <description>A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <drawSize>(1.25,1.25)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <texPath>Buildings/LLColumn2_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+	<uiIconPath>Buildings/LLColumn2</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.05</Flammability>
+      <Mass>10</Mass>
+      <Beauty>15</Beauty>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <comps>
+		<li Class="RimWorldColumns.CompProperties_Overlays">
+			<overlays>
+				<li>
+					<data>
+						<drawSize>(1.25,1.25)</drawSize>
+						<drawOffset>(0,0,0.2)</drawOffset>
+						<texPath>Buildings/LLColumn2_Overlay</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<shaderType>MoteGlow</shaderType>
+					</data>
+					<needsPower>true</needsPower>
+				</li>
+			</overlays>
+		</li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Forbiddable"/>
+		<li Class="CompProperties_Glower">
+			<glowRadius>11</glowRadius>
+			<glowColor>(78, 226, 229, 0)</glowColor>
+		</li>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>false</shortCircuitInRain>
+			<basePowerConsumption>15</basePowerConsumption>
+		</li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+	<killedLeavings>
+		<ChunkSlagSteel>1</ChunkSlagSteel>
+	</killedLeavings>
+    <pathCost>25</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>false</rotatable>
+	<stealable>false</stealable>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <ai_combatDangerous>false</ai_combatDangerous>
+    </building>
+    <researchPrerequisites>
+      <li>OrbitalTradeColumnRes</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <holdsRoof>true</holdsRoof>
+    <canOverlapZones>true</canOverlapZones>
+    <fertility>0</fertility>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+  
 
   <ThingDef ParentName="BuildingBase">
     <defName>OrbitalTradeColumnMod</defName>
@@ -427,7 +516,7 @@
 		<comps>
 			<li Class="CompProperties_Glower">
 				<glowRadius>4</glowRadius>
-				<glowColor>(125,125,135,0)</glowColor>
+				<glowColor>(78, 226, 229, 0)</glowColor>
 			</li>
 			<li Class="RimWorldColumns.CompProperties_Overlays">
 				<overlays>
@@ -470,7 +559,7 @@
 				<fuelIconPath>Misc/Blank</fuelIconPath>
 			</li>
 		</comps>
-		<specialDisplayRadius>4.9</specialDisplayRadius>
+		<specialDisplayRadius>5.9</specialDisplayRadius>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -498,7 +587,7 @@
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<modExtensions>
 			<li Class="RimWorldColumns.ColumnExtension">
-				<radius>4.9</radius>
+				<radius>5.9</radius>
 				<consumptionPercent>1</consumptionPercent>
 				<explosionDamage>55</explosionDamage>
 				<detonationDelay>55</detonationDelay>
