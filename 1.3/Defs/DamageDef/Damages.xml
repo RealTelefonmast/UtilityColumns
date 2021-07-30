@@ -40,18 +40,16 @@
 	
   <FleckDef ParentName="FleckBase">
 		<defName>Mote_Claymore</defName>
-		<fleckSystemClass>FleckSystemStatic</fleckSystemClass>
 		<graphicData>
-			<graphicClass>Graphic_Fleck</graphicClass>
 			<texPath>Misc/Gas</texPath>
 			<shaderType>MoteGlow</shaderType>
-		<renderInstanced>true</renderInstanced>
+			<renderInstanced>false</renderInstanced>
 		</graphicData>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<fadeInTime>0</fadeInTime>
-		<solidTime>0.3</solidTime>
-		<fadeOutTime>1</fadeOutTime>
-		<growthRate>4</growthRate>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>0.8</fadeOutTime>
+		<growthRate>2.5</growthRate>
 	</FleckDef>
 
 </Defs>
