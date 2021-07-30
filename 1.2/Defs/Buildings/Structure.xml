@@ -61,7 +61,7 @@
 		</li>
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
-			<shortCircuitInRain>true</shortCircuitInRain>
+			<shortCircuitInRain>false</shortCircuitInRain>
 			<basePowerConsumption>15</basePowerConsumption>
 		</li>
     </comps>
@@ -145,7 +145,7 @@
       <li Class="CompProperties_Forbiddable"/>
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
-			<shortCircuitInRain>true</shortCircuitInRain>
+			<shortCircuitInRain>false</shortCircuitInRain>
 			<basePowerConsumption>60</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Glower">
@@ -243,7 +243,7 @@
       </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>true</shortCircuitInRain>
+        <shortCircuitInRain>false</shortCircuitInRain>
         <basePowerConsumption>3300</basePowerConsumption>
       </li>
       <li Class="CompProperties_Schedule">
@@ -351,7 +351,7 @@
 		</li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>true</shortCircuitInRain>
+        <shortCircuitInRain>false</shortCircuitInRain>
         <basePowerConsumption>550</basePowerConsumption>
       </li>
       <li Class="CompProperties_HeatPusher">
@@ -567,6 +567,7 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>0</Flammability>
       <Beauty>50</Beauty>
+      <MeditationFocusStrength>0.15</MeditationFocusStrength>
     </statBases>
     <stuffCategories>
       <li>Stony</li>
@@ -594,6 +595,20 @@
 			<drawAssignmentOverlay>true</drawAssignmentOverlay>
 			<compClass>CompAssignableToPawn_Grave</compClass>
 		</li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Morbid</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_GraveFull">
+            <offset>0.10</offset>
+          </li>
+          <li Class="FocusStrengthOffset_GraveCorpseRelationship">
+            <offset>0.10</offset>
+          </li>
+        </offsets>
+      </li>
     </comps>
     <costStuffCount>150</costStuffCount>
 	<pathCost>25</pathCost>
@@ -602,6 +617,7 @@
     <rotatable>false</rotatable>
 	<stealable>false</stealable>
     <researchPrerequisites>
+      <li>ComplexFurniture</li>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
 	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>

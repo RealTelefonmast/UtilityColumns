@@ -4,22 +4,25 @@
 	<DamageDef>
 		<defName>ClaymoreBomb</defName>
 		<label>cluster bomb</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<isExplosive>true</isExplosive>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
 		<hediff>Shredded</hediff>
 		<hediffSolid>Crack</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<impactSoundType>Blunt</impactSoundType>
 		<armorCategory>Sharp</armorCategory>
-		<minDamageToFragment>1</minDamageToFragment>
+		<minDamageToFragment>5</minDamageToFragment>
 		<defaultDamage>25</defaultDamage>
-		<defaultArmorPenetration>0.5</defaultArmorPenetration>
 		<defaultStoppingPower>2</defaultStoppingPower>
-		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
-		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
-		<explosionCellMote>Mote_Claymore</explosionCellMote>
+		<defaultArmorPenetration>0.5</defaultArmorPenetration>
+		<buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
+		<buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+		<plantDamageFactor>4</plantDamageFactor>
+		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+		<explosionCellFleck>Mote_Claymore</explosionCellFleck>
 		<explosionColorCenter>(1, 1, 0.1)</explosionColorCenter>
 		<explosionColorEdge>(0.9, 0.1, 0.1)</explosionColorEdge>
 		<explosionSnowMeltAmount>100</explosionSnowMeltAmount>
@@ -27,7 +30,7 @@
 		<soundExplosion>Explosion_Bomb</soundExplosion>
 		<makesAnimalsFlee>true</makesAnimalsFlee>
 	</DamageDef>
-	
+
 	<ThingDef ParentName="EtherealThingBase">
 		<defName>ClaymoreExplosion</defName>
 		<label>explosion</label>
@@ -35,28 +38,20 @@
 		<tickerType>Normal</tickerType>
 	</ThingDef>
 	
-	<ThingDef>
+  <FleckDef ParentName="FleckBase">
 		<defName>Mote_Claymore</defName>
-		<label>Mote</label>
-		<thingClass>MoteThrown</thingClass>
-		<category>Mote</category>
-		<tickerType>Normal</tickerType>
-		<useHitPoints>false</useHitPoints>
-		<isSaveable>false</isSaveable>
-		<rotatable>false</rotatable>
+		<fleckSystemClass>FleckSystemStatic</fleckSystemClass>
 		<graphicData>
-			<graphicClass>Graphic_Mote</graphicClass>
+			<graphicClass>Graphic_Fleck</graphicClass>
 			<texPath>Misc/Gas</texPath>
 			<shaderType>MoteGlow</shaderType>
+		<renderInstanced>true</renderInstanced>
 		</graphicData>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<mote>
-			<fadeInTime>0</fadeInTime>
-			<solidTime>0.3</solidTime>
-			<fadeOutTime>1</fadeOutTime>
-			<growthRate>4</growthRate>
-		</mote>
-		<drawOffscreen>true</drawOffscreen>
-	</ThingDef>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.3</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>4</growthRate>
+	</FleckDef>
 
 </Defs>

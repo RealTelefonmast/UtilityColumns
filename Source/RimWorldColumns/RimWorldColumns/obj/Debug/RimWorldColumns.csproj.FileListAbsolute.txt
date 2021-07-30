@@ -3,3 +3,9 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Assembli
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TradeColumn\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Assemblies\RimWorldColumns.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Assemblies\RimWorldColumns.pdb

@@ -15,6 +15,9 @@ namespace RimWorldColumns
         //public List<IntVec3>[] Sectors = new List<IntVec3>[4];
         public List<ClaymoreCharge> Charges;
 
+        public Vector3[] DrawPositions => new Vector3[1] { DrawPos };
+        public bool[] DrawBools => new bool[1] { RefuelComp.HasFuel || Charges.Any(c => c.Detonating) };
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -114,8 +117,5 @@ namespace RimWorldColumns
             }
             */
         }
-
-        public Vector3[] DrawPositions => new Vector3[1] {DrawPos};
-        public bool[] DrawBools => new bool[1] {RefuelComp.HasFuel || Charges.Any(c => c.Detonating)};
     }
 }

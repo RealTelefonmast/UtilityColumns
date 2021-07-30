@@ -53,12 +53,11 @@ namespace RimWorldColumns
 
         public override void PostPrintOnto(SectionLayer layer)
         {
-            base.PostPrintOnto(layer);
             for (var index = 0; index < Graphics.Count; index++)
             {
                 var graphic = Graphics[index];
                 if (CanDraw(index))
-                    graphic.Graphic.Print(layer, parent);//Print(layer, DrawPos(index), parent.Rotation);
+                    graphic.Print(layer, DrawPos(index), parent.Rotation);//Print(layer, DrawPos(index), parent.Rotation);
             }
         }
     }
@@ -110,8 +109,9 @@ namespace RimWorldColumns
 
         public void Print(SectionLayer layer, Vector3 drawPos, Rot4 rot)
         {
-            //var info = new GraphicDrawInfo(Graphic, drawPos, rot, ((FXThingDef)parent.def).extraData, parent.def);
-            Printer_Plane.PrintPlane(layer, new Vector3(drawPos.x, altitude, drawPos.z), data.data.drawSize, Graphic.MatAt(rot));
+            var parent = parentComp.parent;
+            Vector3 center = GenThing.TrueCenter(parent.Position, parent.Rotation, parent.def.size, altitude) + data.data.DrawOffsetForRot(rot);
+            Printer_Plane.PrintPlane(layer, center, data.data.drawSize, Graphic.MatAt(rot));
         }
     }
 
