@@ -351,11 +351,11 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>550</basePowerConsumption>
+        <basePowerConsumption>500</basePowerConsumption>
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>-38</heatPerSecond>
+        <heatPerSecond>-50</heatPerSecond>
         <heatPushMinTemperature>-15</heatPushMinTemperature>
       </li>
     </comps>
