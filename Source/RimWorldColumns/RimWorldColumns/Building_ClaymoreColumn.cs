@@ -41,6 +41,11 @@ namespace RimWorldColumns
             //Scribe_Collections.Look(ref Charges, "charges");
         }
 
+        public void ToggleSafety(Rot4 forDir)
+        {
+
+        }
+
         public override void Tick()
         {
             base.Tick();
@@ -76,7 +81,7 @@ namespace RimWorldColumns
             string obstructedDirs = "";
             foreach (var charge in Charges)
             {
-                if (charge.Obstructed)
+                if (charge.Obstructed(out _))
                     obstructedDirs += (obstructedDirs.NullOrEmpty() ? "" : ", ") + charge.direction.ToStringHuman();
             }
             if(!obstructedDirs.NullOrEmpty())
@@ -91,7 +96,13 @@ namespace RimWorldColumns
                 yield return gizmo;
             }
 
-            /*
+
+
+            yield return new Gizmo_ClaymoreSafetySettings()
+            {
+                claymoreReference = this,
+            };
+            
             if (DebugSettings.godMode)
             {
                 yield return new Command_Action()
@@ -115,7 +126,7 @@ namespace RimWorldColumns
                     }
                 };
             }
-            */
+            
         }
     }
 }

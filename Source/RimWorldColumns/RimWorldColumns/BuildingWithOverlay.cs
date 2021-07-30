@@ -9,7 +9,6 @@ namespace RimWorldColumns
 {
     public class BuildingWithOverlay : Building
     {
-
         public override void Draw()
         {
             base.Draw();

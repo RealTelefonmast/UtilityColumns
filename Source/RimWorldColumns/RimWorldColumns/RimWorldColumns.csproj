@@ -51,6 +51,9 @@
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildingWithOverlay.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="CompFX.cs" />
     <Compile Include="DamageWorker_Claymore.cs" />
     <Compile Include="Explosion_Directed.cs" />
+    <Compile Include="Gizmo_ClaymoreSafetySettings.cs" />
     <Compile Include="PlaceWorker_MinimumDistance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeleUtils.cs" />

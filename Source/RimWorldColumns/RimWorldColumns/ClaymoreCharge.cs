@@ -12,6 +12,7 @@ namespace RimWorldColumns
     [StaticConstructorOnStartup]
     public class ClaymoreCharge
     {
+        private static readonly Material obstructed = MaterialPool.MatFrom("Misc/Obstructed", ShaderDatabase.Transparent);
         private static readonly Material arrow = MaterialPool.MatFrom("Misc/DirectionArrow", ShaderDatabase.Transparent);
         private static readonly Material redArrow = MaterialPool.MatFrom("Misc/DirectionArrow", ShaderDatabase.Transparent, Color.red);
         public List<IntVec3> explosionCells;
@@ -23,6 +24,13 @@ namespace RimWorldColumns
         private IntVec3 center;
         private int ticksUntilDetonation = -1;
 
+
+        //activity, safety, obstructions
+        public bool[] settings = new []{true, true, true};
+        //private bool showObstructions = true;
+        //private bool safetyOn = true;
+        //private bool active = true;
+
         public ClaymoreCharge(Building_ClaymoreColumn parent, Rot4 direction)
         {
             this.parent = parent;
@@ -32,15 +40,28 @@ namespace RimWorldColumns
             explosionCells = TeleUtils.SectorCells(center, map, parent.Extension.radius, 90f, direction.AsAngle, false).ToList();
         }
 
-        public bool Obstructed => explosionCells.Any(c => c.InBounds(map) && c.GetFirstBuilding(map) is Building b && b.Faction == Faction.OfPlayer);
-        public bool Available => !Obstructed && !Detonating && parent.RefuelComp.Fuel >= DetonationCost;
+        public bool Obstructed(out IEnumerable<Thing> obstructions)
+        {
+            obstructions = null;
+            if (!UsesSafety) return false;
+            obstructions = explosionCells.Where(v => v.InBounds(map)).Select(c => c.GetFirstBuilding(map)).Where(b => b?.Faction == Faction.OfPlayer);
+            return obstructions.Any(); //explosionCells.Any(c => c.InBounds(map) && c.GetFirstBuilding(map) is Building b && b.Faction == Faction.OfPlayer);
+        }
+
+        public bool ShowObstructions => settings[2];
+        public bool UsesSafety => settings[1];
+        public bool IsActive => settings[0];
+        public bool Available => !Obstructed(out _) && !Detonating && parent.RefuelComp.Fuel >= DetonationCost;
         public bool Detonating => ticksUntilDetonation >= 0;
         public float DetonationCost => (parent.Extension.consumptionPercent * parent.RefuelComp.Props.fuelCapacity);
 
         public float CurrentCost { get; set; }
 
+        private Pawn CurrentTarget = null;
+
         public void Tick()
         {
+            if (!IsActive) return;
             if (Detonating)
             {
                 if (ticksUntilDetonation == 0)
@@ -54,9 +75,35 @@ namespace RimWorldColumns
 
         }
 
+        public void ToggleActive()
+        {
+            settings[0] = !settings[0];
+        }
+
+        public void ToggleSafety()
+        {
+            settings[1] = !settings[1];
+        }
+
+        public void ToggleObstructions()
+        {
+            settings[2] = !settings[2];
+        }
+
         private bool PawnInSector()
         {
-            return explosionCells.Any(c => c.InBounds(map) && c.GetFirstPawn(map) is Pawn pawn && !pawn.Downed && pawn.HostileTo(Faction.OfPlayer));
+            foreach (var cell in explosionCells)
+            {
+                if(!cell.InBounds(map)) continue;
+                var pawn = cell.GetFirstPawn(map);
+                if(pawn == null) continue;
+                if (!pawn.Downed && pawn.HostileTo(Faction.OfPlayer))
+                {
+                    CurrentTarget = pawn;
+                    return true;
+                } 
+            }
+            return false;
         }
 
         private void TriggerCharge()
@@ -75,10 +122,10 @@ namespace RimWorldColumns
             explosion.damType = parent.Extension.damageType ?? DamageDefOf.Bomb;
             explosion.instigator = parent;
             explosion.damAmount = (int)parent.Extension.explosionDamage;
-            explosion.armorPenetration = 10;
+            explosion.armorPenetration = (float)explosion.damAmount * 0.015f;
             explosion.weapon = null;
             explosion.projectile = null;
-            explosion.intendedTarget = null;
+            explosion.intendedTarget = CurrentTarget;
             explosion.preExplosionSpawnThingDef = null;
             explosion.preExplosionSpawnChance = 0;
             explosion.preExplosionSpawnThingCount = 0;
@@ -87,17 +134,35 @@ namespace RimWorldColumns
             explosion.postExplosionSpawnThingCount = 0;
             explosion.applyDamageToExplosionCellsNeighbors = false;
             explosion.chanceToStartFire = 0;
-            explosion.damageFalloff = false;
+            explosion.damageFalloff = true;
             explosion.needLOSToCell1 = null;
             explosion.needLOSToCell2 = null;
             explosion.PreStartExplosion(explosionCells);
             explosion.StartExplosion(null, null);
-		}
+
+            CurrentTarget = null;
+        }
 
         public void DrawExtras()
         {
-            if (Obstructed) return;
-            Graphics.DrawMesh(MeshPool.plane10, (center + direction.FacingCell).ToVector3ShiftedWithAltitude(AltitudeLayer.MetaOverlays), direction.AsQuat, Detonating ? redArrow : arrow, 0);
+            if (!IsActive) return;
+            if (ShowObstructions && Obstructed(out var obstructions))
+            {
+                foreach (var obstruction in obstructions)
+                {
+                    Material mat = obstructed;
+                    float num = (Time.realtimeSinceStartup + 397f * (float)(obstruction.thingIDNumber % 571)) * 4f;
+                    float num2 = ((float)Math.Sin((double)num) + 1f) * 0.5f;
+                    num2 = 0.3f + num2 * 0.7f;
+                    Material material = FadedMaterialPool.FadedVersionOf(mat, num2);
+                    var c = obstruction.TrueCenter();
+                    Graphics.DrawMesh(MeshPool.plane08, new Vector3(c.x, AltitudeLayer.MetaOverlays.AltitudeFor(), c.z), Quaternion.identity, material, 0);
+                }
+            }
+            else
+            {
+                Graphics.DrawMesh(MeshPool.plane10, (center + direction.FacingCell).ToVector3ShiftedWithAltitude(AltitudeLayer.MetaOverlays), direction.AsQuat, Detonating ? redArrow : arrow, 0);
+            }
         }
     }
 }
