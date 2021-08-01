@@ -547,7 +547,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</fuelFilter>
-				<fuelCapacity>15</fuelCapacity>
+				<fuelCapacity>20</fuelCapacity>
 				<initialFuelPercent>0</initialFuelPercent>
 				<autoRefuelPercent>0.9</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
@@ -590,7 +590,7 @@
 				<radius>5.9</radius>
 				<consumptionPercent>1</consumptionPercent>
 				<explosionDamage>55</explosionDamage>
-				<detonationDelay>55</detonationDelay>
+				<detonationDelay>75</detonationDelay>
 				<damageType>ClaymoreBomb</damageType>
 			</li>
 		</modExtensions>
@@ -713,6 +713,7 @@
 	<canOverlapZones>true</canOverlapZones>
 	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
+
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>ArchotechDroneColumn</defName>
@@ -839,6 +840,5 @@
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
   </ThingDef>
-
   
 </Defs>
