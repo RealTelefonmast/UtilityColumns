@@ -714,7 +714,6 @@
 	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
 
-
 	<ThingDef ParentName="BuildingBase">
 		<defName>ArchotechDroneColumn</defName>
 		<label>Archo Column</label>
@@ -725,10 +724,6 @@
 			<drawOffset>(0,0,0.3)</drawOffset>
 			<texPath>Buildings/ArchoColumn/ArchoColumnBase</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
-			<shadowData>
-				<volume>(0.3, 0.5, 0.3)</volume>
-				<offset>(0,0,-0.23)</offset>
-			</shadowData>
 			<damageData>
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData>
@@ -759,6 +754,20 @@
 				<overlays>
 					<li>
 						<data>
+							<drawSize>(3,3)</drawSize>
+							<drawOffset>(0,0,0.3)</drawOffset>
+							<texPath>Buildings/ArchoColumn/ArchoColumnFloor</texPath>
+							<graphicClass>Graphic_Random</graphicClass>
+							<shaderType>MoteGlow</shaderType>
+						</data>
+						<needsPower>true</needsPower>
+					</li>
+				</overlays>
+			</li>
+			<li Class="RimWorldColumns.CompProperties_Overlays">
+				<overlays>
+					<li>
+						<data>
 							<drawSize>(1.5,1.5)</drawSize>
 							<drawOffset>(0,0,0.3)</drawOffset>
 							<texPath>Buildings/ArchoColumn/ArchoColumnGlow</texPath>
@@ -771,7 +780,8 @@
 			</li>
 			<li Class="CompProperties_MoteEmitter">
 				<mote>Mote_PsychicConditionCauserEffect</mote>
-				<emissionInterval>50</emissionInterval>
+				<emissionInterval>15000</emissionInterval>
+				<soundOnEmission>Archonexus_Throb</soundOnEmission>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Forbiddable"/>
@@ -782,14 +792,15 @@
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>false</shortCircuitInRain>
-				<basePowerConsumption>3600</basePowerConsumption>
+				<basePowerConsumption>3500</basePowerConsumption>
 			</li>
 		</comps>
+		<tickerType>Normal</tickerType>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
 		</killedLeavings>
-		<pathCost>25</pathCost>
+		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
 		<designationCategory>Misc</designationCategory>
 		<rotatable>false</rotatable>
@@ -840,5 +851,4 @@
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
   </ThingDef>
-  
 </Defs>
