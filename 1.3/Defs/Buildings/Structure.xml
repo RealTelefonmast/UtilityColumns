@@ -62,7 +62,7 @@
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
 			<shortCircuitInRain>false</shortCircuitInRain>
-			<basePowerConsumption>15</basePowerConsumption>
+			<basePowerConsumption>45</basePowerConsumption>
 		</li>
     </comps>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
@@ -150,7 +150,7 @@
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
 			<shortCircuitInRain>false</shortCircuitInRain>
-			<basePowerConsumption>15</basePowerConsumption>
+			<basePowerConsumption>45</basePowerConsumption>
 		</li>
     </comps>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
@@ -440,7 +440,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>500</basePowerConsumption>
+        <basePowerConsumption>450</basePowerConsumption>
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
@@ -537,7 +537,7 @@
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>false</shortCircuitInRain>
-				<basePowerConsumption>25</basePowerConsumption>
+				<basePowerConsumption>45</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Refuelable">
 				<fuelLabel>cluster fragments</fuelLabel>
@@ -851,4 +851,5 @@
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
   </ThingDef>
+
 </Defs>
