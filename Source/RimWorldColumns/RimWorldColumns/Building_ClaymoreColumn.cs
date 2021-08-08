@@ -21,13 +21,17 @@ namespace RimWorldColumns
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            Charges = new List<ClaymoreCharge>()
+            if (Charges.NullOrEmpty())
             {
-                new ClaymoreCharge(this, Rot4.North),
-                new ClaymoreCharge(this, Rot4.East),
-                new ClaymoreCharge(this, Rot4.South),
-                new ClaymoreCharge(this, Rot4.West)
-            };
+                Charges = new List<ClaymoreCharge>()
+                {
+                    new ClaymoreCharge(this, Rot4.North),
+                    new ClaymoreCharge(this, Rot4.East),
+                    new ClaymoreCharge(this, Rot4.South),
+                    new ClaymoreCharge(this, Rot4.West)
+                };
+            }
+            Charges.ForEach(c => c.OnSpawn());
 
             //Sectors[0] = TeleUtils.SectorCells(Position, map, 5, 90, 0, false).ToList();
             //Sectors[1] = TeleUtils.SectorCells(Position, map, 5, 90, 90, false).ToList();
@@ -38,7 +42,7 @@ namespace RimWorldColumns
         public override void ExposeData()
         {
             base.ExposeData();
-            //Scribe_Collections.Look(ref Charges, "charges");
+            Scribe_Collections.Look(ref Charges, "charges", LookMode.Deep);
         }
 
         public void ToggleSafety(Rot4 forDir)

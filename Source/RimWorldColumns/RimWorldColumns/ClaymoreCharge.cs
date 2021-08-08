@@ -10,7 +10,7 @@ using Verse;
 namespace RimWorldColumns
 {
     [StaticConstructorOnStartup]
-    public class ClaymoreCharge
+    public class ClaymoreCharge : IExposable
     {
         private static readonly Material obstructed = MaterialPool.MatFrom("Misc/Obstructed", ShaderDatabase.Transparent);
         private static readonly Material arrow = MaterialPool.MatFrom("Misc/DirectionArrow", ShaderDatabase.Transparent);
@@ -18,33 +18,43 @@ namespace RimWorldColumns
         public List<IntVec3> explosionCells;
 
         public Building_ClaymoreColumn parent;
-        public Map map;
         public Rot4 direction;
 
-        private IntVec3 center;
         private int ticksUntilDetonation = -1;
 
+        private Map Map => parent.Map;
+        private IntVec3 Center => parent.Position;
 
         //activity, safety, obstructions
         public bool[] settings = new []{true, true, true};
-        //private bool showObstructions = true;
-        //private bool safetyOn = true;
-        //private bool active = true;
+
+        public ClaymoreCharge(){}
 
         public ClaymoreCharge(Building_ClaymoreColumn parent, Rot4 direction)
         {
             this.parent = parent;
             this.direction = direction;
-            this.map = parent.Map;
-            center = parent.Position;
-            explosionCells = TeleUtils.SectorCells(center, map, parent.Extension.radius, 90f, direction.AsAngle, false).ToList();
+            explosionCells = TeleUtils.SectorCells(Center, Map, parent.Extension.radius, 90f, direction.AsAngle, false).ToList();
+        }
+
+        public void ExposeData()
+        {
+            DataExposeUtility.BoolArray(ref settings, 3, "settingBools");
+            Scribe_Values.Look(ref ticksUntilDetonation, "ticksUntilDet");
+            Scribe_Values.Look(ref direction, "claymoreDir");
+            Scribe_References.Look(ref parent, "claymoreParent");
+        }
+
+        public void OnSpawn()
+        {
+            explosionCells = TeleUtils.SectorCells(Center, Map, parent.Extension.radius, 90f, direction.AsAngle, false).ToList();
         }
 
         public bool Obstructed(out IEnumerable<Thing> obstructions)
         {
             obstructions = null;
             if (!UsesSafety) return false;
-            obstructions = explosionCells.Where(v => v.InBounds(map)).Select(c => c.GetFirstBuilding(map)).Where(b => b?.Faction == Faction.OfPlayer);
+            obstructions = explosionCells.Where(v => v.InBounds(Map)).Select(c => c.GetFirstBuilding(Map)).Where(b => b?.Faction == Faction.OfPlayer);
             return obstructions.Any(); //explosionCells.Any(c => c.InBounds(map) && c.GetFirstBuilding(map) is Building b && b.Faction == Faction.OfPlayer);
         }
 
@@ -94,8 +104,8 @@ namespace RimWorldColumns
         {
             foreach (var cell in explosionCells)
             {
-                if(!cell.InBounds(map)) continue;
-                var pawn = cell.GetFirstPawn(map);
+                if(!cell.InBounds(Map)) continue;
+                var pawn = cell.GetFirstPawn(Map);
                 if(pawn == null) continue;
                 if (!pawn.Downed && pawn.HostileTo(Faction.OfPlayer))
                 {
@@ -117,7 +127,7 @@ namespace RimWorldColumns
 
         public void Detonate()
         {
-            Explosion_Directed explosion = (Explosion_Directed)GenSpawn.Spawn(DefDatabase<ThingDef>.GetNamed("ClaymoreExplosion"), center, map, WipeMode.Vanish);
+            Explosion_Directed explosion = (Explosion_Directed)GenSpawn.Spawn(DefDatabase<ThingDef>.GetNamed("ClaymoreExplosion"), Center, Map, WipeMode.Vanish);
             explosion.radius = parent.Extension.radius;
             explosion.damType = parent.Extension.damageType ?? DamageDefOf.Bomb;
             explosion.instigator = parent;
@@ -161,7 +171,7 @@ namespace RimWorldColumns
             }
             else
             {
-                Graphics.DrawMesh(MeshPool.plane10, (center + direction.FacingCell).ToVector3ShiftedWithAltitude(AltitudeLayer.MetaOverlays), direction.AsQuat, Detonating ? redArrow : arrow, 0);
+                Graphics.DrawMesh(MeshPool.plane10, (Center + direction.FacingCell).ToVector3ShiftedWithAltitude(AltitudeLayer.MetaOverlays), direction.AsQuat, Detonating ? redArrow : arrow, 0);
             }
         }
     }
