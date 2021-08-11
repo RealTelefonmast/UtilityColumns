@@ -589,9 +589,9 @@
 			<li Class="RimWorldColumns.ColumnExtension">
 				<radius>5.9</radius>
 				<consumptionPercent>1</consumptionPercent>
-				<explosionDamage>55</explosionDamage>
-				<detonationDelay>75</detonationDelay>
-				<damageType>ClaymoreBomb</damageType>
+				<explosionDamage>75</explosionDamage>
+				<detonationDelay>80</detonationDelay>
+				<damageType>Bomb</damageType>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -713,6 +713,7 @@
 	<canOverlapZones>true</canOverlapZones>
 	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
+
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>ArchotechDroneColumn</defName>
