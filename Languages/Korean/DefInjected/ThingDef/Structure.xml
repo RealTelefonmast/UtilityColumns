@@ -2,10 +2,10 @@
 <LanguageData>
 
   <LightColumnMod.label>조명 기둥</LightColumnMod.label>
-  <LightColumnMod.description>조명등이 달린 단순한 설치형 기둥입니다.</LightColumnMod.description>
+  <LightColumnMod.description>조명등이 달린 단순한 설치형 기둥입니다. 귀족들이 좋아합니다.</LightColumnMod.description>
 
   <DarkColumnMod.label>희미한 조명 기둥</DarkColumnMod.label>
-  <DarkColumnMod.description>희미한 빛을 발산하는 조명등이 달린 설치형 기둥입니다. 어두운 곳을 선호하는 사람들은 이 정도 광원으로도 만족합니다.</DarkColumnMod.description>
+  <DarkColumnMod.description>희미한 빛을 발산하는 조명등이 달린 설치형 기둥입니다. 어두운 곳을 선호하는 사람들은 이 정도 광원으로도 만족합니다. 귀족들이 좋아합니다.</DarkColumnMod.description>
 
   <OrbitalTradeColumnMod.label>무역 송신 기둥</OrbitalTradeColumnMod.label>
   <OrbitalTradeColumnMod.description>창고 관리에 유용한 기계 기둥입니다. 지붕을 지탱하고, 주변 물품들을 궤도로 전송할 수 있으며, 조명등이 달려 있습니다.</OrbitalTradeColumnMod.description>
@@ -18,11 +18,18 @@
   <IceColumnMod.description>냉동실 관리에 유용한 기계 기둥입니다. 지붕을 지탱하고, 주변 온도를 -15도로 유지하며, 조명등이 달려 있습니다.</IceColumnMod.description>
 
   <DetColumnMod.label>파편 기둥</DetColumnMod.label>
-  <DetColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 파편 폭발 공격을 가하며, 조명등이 달려 있습니다.</DetColumnMod.description>
+  <DetColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 파편 폭발 공격을 가하며, 작은 조명등이 달려 있습니다.</DetColumnMod.description>
+  
+  <FlameColumnMod.label>화염 기둥</FlameColumnMod.label>
+  <FlameColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 화염 폭발 공격을 가하며, 작은 조명등이 달려 있습니다.</FlameColumnMod.description>
 
   <DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>장전된 파편</DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>
   <DetColumnMod.comps.CompRefuelable.fuelLabel>장전된 파편</DetColumnMod.comps.CompRefuelable.fuelLabel>
   <DetColumnMod.comps.CompRefuelable.outOfFuelMessage>재장전 필요</DetColumnMod.comps.CompRefuelable.outOfFuelMessage>
+  
+  <FlameColumnMod.comps.CompRefuelable.fuelGizmoLabel>장전된 연료</FlameColumnMod.comps.CompRefuelable.fuelGizmoLabel>
+  <FlameColumnMod.comps.CompRefuelable.fuelLabel>장전된 연료</FlameColumnMod.comps.CompRefuelable.fuelLabel>
+  <FlameColumnMod.comps.CompRefuelable.outOfFuelMessage>재장전 필요</FlameColumnMod.comps.CompRefuelable.outOfFuelMessage>
 
   <GraveColumnMod.label>성소 기둥</GraveColumnMod.label>
   <GraveColumnMod.description>영예롭게 죽은 자들을 기리기 위한 장식 기둥입니다. 지붕을 지탱하고, 시신을 썩지 않는 상태로 보존할 수 있습니다.</GraveColumnMod.description>
