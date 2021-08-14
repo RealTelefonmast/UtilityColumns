@@ -639,7 +639,7 @@
 		<comps>
 			<li Class="CompProperties_Glower">
 				<glowRadius>4</glowRadius>
-				<glowColor>(78, 226, 229, 0)</glowColor>
+				<glowColor>(226, 150, 90, 0)</glowColor>
 			</li>
 			<li Class="RimWorldColumns.CompProperties_Overlays">
 				<overlays>
