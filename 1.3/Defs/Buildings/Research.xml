@@ -18,8 +18,8 @@
 
   <ResearchProjectDef>
     <defName>DetColumnRes</defName>
-    <label>cluster column</label>
-    <description>Unlocks the cluster column for base defense.</description>
+    <label>defence columns</label>
+    <description>Unlocks the cluster columns for base defense.</description>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>

@@ -2,10 +2,10 @@
 <LanguageData>
 
   <LightColumnMod.label>조명 기둥</LightColumnMod.label>
-  <LightColumnMod.description>조명등이 달린 단순한 설치형 기둥입니다. 귀족들이 좋아합니다.</LightColumnMod.description>
+  <LightColumnMod.description>조명등이 달린 단순한 설치형 기둥입니다.</LightColumnMod.description>
 
   <DarkColumnMod.label>희미한 조명 기둥</DarkColumnMod.label>
-  <DarkColumnMod.description>희미한 빛을 발산하는 조명등이 달린 설치형 기둥입니다. 어두운 곳을 선호하는 사람들은 이 정도 광원으로도 만족합니다. 귀족들이 좋아합니다.</DarkColumnMod.description>
+  <DarkColumnMod.description>희미한 빛을 발산하는 조명등이 달린 설치형 기둥입니다. 어두운 곳을 선호하는 사람들은 이 정도 광원으로도 만족합니다.</DarkColumnMod.description>
 
   <OrbitalTradeColumnMod.label>무역 송신 기둥</OrbitalTradeColumnMod.label>
   <OrbitalTradeColumnMod.description>창고 관리에 유용한 기계 기둥입니다. 지붕을 지탱하고, 주변 물품들을 궤도로 전송할 수 있으며, 조명등이 달려 있습니다.</OrbitalTradeColumnMod.description>

@@ -4,7 +4,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>LightColumnMod</defName>
     <label>light column</label>
-    <description>A simple mobile column, just lights the area. Nobles like this stuff.</description>
+    <description>A simple mobile column, just lights the area.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
@@ -87,12 +87,11 @@
     <fertility>0</fertility>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
-  
 
   <ThingDef ParentName="BuildingBase">
     <defName>DarkColumnMod</defName>
     <label>dark column</label>
-    <description>A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source. Nobles like this stuff.</description>
+    <description>A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
@@ -175,7 +174,6 @@
     <fertility>0</fertility>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
-  
 
   <ThingDef ParentName="BuildingBase">
     <defName>OrbitalTradeColumnMod</defName>
@@ -375,7 +373,6 @@
     <fertility>0</fertility>
 	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
-  
 
   <ThingDef ParentName="BuildingBase">
     <defName>IceColumnMod</defName>
@@ -592,6 +589,8 @@
 				<explosionDamage>75</explosionDamage>
 				<detonationDelay>80</detonationDelay>
 				<damageType>Bomb</damageType>
+				<postExplosionSpawnThingDef>Filth_Ash</postExplosionSpawnThingDef>
+				<postSpawnChance>0.25</postSpawnChance>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -670,7 +669,7 @@
 						<li>Chemfuel</li>
 					</thingDefs>
 				</fuelFilter>
-				<fuelCapacity>25</fuelCapacity>
+				<fuelCapacity>35</fuelCapacity>
 				<initialFuelPercent>0</initialFuelPercent>
 				<autoRefuelPercent>0.9</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
@@ -716,6 +715,8 @@
 				<detonationDelay>80</detonationDelay>
 				<damageType>Flame</damageType>
 				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preSpawnChance>0.25</preSpawnChance>
+				<chanceToStartFire>0.6</chanceToStartFire>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -838,7 +839,7 @@
 	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
 
-
+<!--
 	<ThingDef ParentName="BuildingBase">
 		<defName>ArchotechDroneColumn</defName>
 		<label>Archo Column</label>
@@ -944,7 +945,6 @@
 		<fertility>0</fertility>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 	</ThingDef>
-	
 
   <ThingDef ParentName="ResourceBase">
     <defName>ComponentArchoDrone</defName>
@@ -976,5 +976,5 @@
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
   </ThingDef>
-
+-->
 </Defs>
