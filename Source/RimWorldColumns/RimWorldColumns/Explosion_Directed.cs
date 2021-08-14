@@ -102,15 +102,9 @@ namespace RimWorldColumns
 					this.AffectCell(this.cellsToAffect[num]);
 				}
 				catch (Exception ex)
-				{
-					Log.Error(string.Concat(new object[]
-					{
-						"Explosion could not affect cell ",
-						this.cellsToAffect[num],
-						": ",
-						ex
-					}), false);
-				}
+                {
+                    Log.Error($"Explosion could not affect cell {cellsToAffect[num]}: {ex}");
+                }
 				this.cellsToAffect.RemoveAt(num);
 				num--;
 			}
