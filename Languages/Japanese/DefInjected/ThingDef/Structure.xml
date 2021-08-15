@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <LightColumnMod.label>light column</LightColumnMod.label>
-  <LightColumnMod.description>A simple mobile column, just lights the area.</LightColumnMod.description>
+  <!-- EN: light column -->
+  <LightColumnMod.label>光る支柱</LightColumnMod.label>
+  <!-- EN: A simple mobile column, just lights the area. -->
+  <LightColumnMod.description>周囲を照らすだけの,シンプルな可動性の支柱です.</LightColumnMod.description>
 
-  <DarkColumnMod.label>dark column</DarkColumnMod.label>
-  <DarkColumnMod.description>A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source.</DarkColumnMod.description>
+  <!-- EN: dark column -->
+  <DarkColumnMod.label>仄暗い支柱</DarkColumnMod.label>
+  <!-- EN: 　A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source. -->
+  <DarkColumnMod.description>周囲をぼんやりとした光で照らす,シンプルな可動性の支柱です.暗闇での作業を好む人には,この程度の明かりで十分です.</DarkColumnMod.description>
 
   <OrbitalTradeColumnMod.label>orbital trade column</OrbitalTradeColumnMod.label>
   <OrbitalTradeColumnMod.description>A utility column, acts like an orbital trade beacon, and lights the area, perfect for warehouses.</OrbitalTradeColumnMod.description>
