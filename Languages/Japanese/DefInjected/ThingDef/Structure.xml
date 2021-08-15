@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LightColumnMod.label>light column</LightColumnMod.label>
+  <LightColumnMod.description>A simple mobile column, just lights the area.</LightColumnMod.description>
+
+  <DarkColumnMod.label>dark column</DarkColumnMod.label>
+  <DarkColumnMod.description>A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source.</DarkColumnMod.description>
+
+  <OrbitalTradeColumnMod.label>orbital trade column</OrbitalTradeColumnMod.label>
+  <OrbitalTradeColumnMod.description>A utility column, acts like an orbital trade beacon, and lights the area, perfect for warehouses.</OrbitalTradeColumnMod.description>
+
+  <SunColumnMod.label>sun column</SunColumnMod.label>
+  <SunColumnMod.description>A utility column, acts like a sun lamp and keeps your room warm, perfect for greenhouses. Automatically turns itself off at night.</SunColumnMod.description>
+  <SunColumnMod.comps.CompSchedule.offMessage>Off for plant resting period</SunColumnMod.comps.CompSchedule.offMessage>
+
+  <IceColumnMod.label>frozen column</IceColumnMod.label>
+  <IceColumnMod.description>A utility column, acts like a cooler, keeps the room at -15°C and emits blue light, perfect for fridges.</IceColumnMod.description>
+
+  <DetColumnMod.label>cluster column</DetColumnMod.label>
+  <DetColumnMod.description>An advanced column for base defense. Upon detecting an enemy in any direction, it will detonate a highly explosive cluster charge into the same direction. Can be reloaded.</DetColumnMod.description>
+  
+  <FlameColumnMod.label>flame column</FlameColumnMod.label>
+  <FlameColumnMod.description>An advanced column for base defense. Upon detecting an enemy in any direction, it will detonate an incendiary bomb charge into the same direction. Can be reloaded.</FlameColumnMod.description>
+
+  <DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>cluster fragments</DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>
+  <DetColumnMod.comps.CompRefuelable.fuelLabel>cluster fragments</DetColumnMod.comps.CompRefuelable.fuelLabel>
+  <DetColumnMod.comps.CompRefuelable.outOfFuelMessage>Cannot detonate: Needs ammo</DetColumnMod.comps.CompRefuelable.outOfFuelMessage>
+  
+  <FlameColumnMod.comps.CompRefuelable.fuelGizmoLabel>incendiary fuel</FlameColumnMod.comps.CompRefuelable.fuelGizmoLabel>
+  <FlameColumnMod.comps.CompRefuelable.fuelLabel>incendiary fuel</FlameColumnMod.comps.CompRefuelable.fuelLabel>
+  <FlameColumnMod.comps.CompRefuelable.outOfFuelMessage>Cannot detonate: Needs ammo</FlameColumnMod.comps.CompRefuelable.outOfFuelMessage>
+
+  <GraveColumnMod.label>sacred column</GraveColumnMod.label>
+  <GraveColumnMod.description>An ornamented burial column for the honored dead. Designed to keep a dead person for many years.\n\nAltman be praised.</GraveColumnMod.description>
+
+  <ArchotechDroneColumn.label>Archo Column</ArchotechDroneColumn.label>
+  <ArchotechDroneColumn.description>An ancient archotech cube platform, repurposed as a column.</ArchotechDroneColumn.description>
+
+</LanguageData>
