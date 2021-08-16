@@ -11,6 +11,8 @@ namespace RimWorldColumns
     [DefOf]
     public static class UCDefOf
     {
+        public static RWCSettingsDef ColumnSettings;
+
         public static ThingDef LightColumnMod;
         public static ThingDef DarkColumnMod;
         public static ThingDef OrbitalTradeColumnMod;

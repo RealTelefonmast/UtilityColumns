@@ -11,9 +11,17 @@ namespace RimWorldColumns
     [StaticConstructorOnStartup]
     public static class HarmonyPatches
     {
+        public static RWCSettingsDef settingsDef;
+        public static readonly List<ThingDef> extraColumns = new List<ThingDef>();
+
         static HarmonyPatches()
         {
             Log.Message("[Utility Columns] - Patching...");
+            //Load..
+            settingsDef = UCDefOf.ColumnSettings;
+            extraColumns.Add(UCDefOf.Column);
+            extraColumns.AddRange(settingsDef.columnsForRoomRequirement);
+
             var harmony = new Harmony("nephlite.orbitaltradecolumn");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
             VEPatch();
@@ -58,21 +66,9 @@ namespace RimWorldColumns
         {
             if (rr.things.Contains(UCDefOf.Column))
             {
-                rr.things.AddRange(ColumnDefs);
+                rr.things.AddRange(extraColumns);
             }
         }
-
-        public static List<ThingDef> ColumnDefs => new List<ThingDef>()
-        {
-            UCDefOf.LightColumnMod,
-            UCDefOf.DarkColumnMod,
-            UCDefOf.OrbitalTradeColumnMod,
-            UCDefOf.SunColumnMod,
-            UCDefOf.IceColumnMod,
-            UCDefOf.DetColumnMod,
-            UCDefOf.FlameColumnMod,
-            UCDefOf.GraveColumnMod,
-        };
     }
 
     [HarmonyPatch(typeof(RoomRequirement_ThingCount), "Count")]
@@ -82,7 +78,7 @@ namespace RimWorldColumns
         {
             if (__instance.thingDef != UCDefOf.Column) return;
 
-            __result += HarmonyPatches.ColumnDefs.Sum(r.ThingCount);
+            __result += HarmonyPatches.extraColumns.Sum(r.ThingCount);
         }
     }
 }
