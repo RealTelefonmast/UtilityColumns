@@ -11,12 +11,17 @@
   <!-- EN: 　A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source. -->
   <DarkColumnMod.description>周囲をぼんやりとした光で照らす,シンプルな可動性の支柱です.暗闇での作業を好む人には,この程度の明かりで十分です.</DarkColumnMod.description>
 
-  <OrbitalTradeColumnMod.label>orbital trade column</OrbitalTradeColumnMod.label>
-  <OrbitalTradeColumnMod.description>A utility column, acts like an orbital trade beacon, and lights the area, perfect for warehouses.</OrbitalTradeColumnMod.description>
+  <!-- EN: orbital trade column -->
+  <OrbitalTradeColumnMod.label>貿易用の柱</OrbitalTradeColumnMod.label>
+  <!-- EN: A utility column, acts like an orbital trade beacon, and lights the area, perfect for warehouses. -->
+  <OrbitalTradeColumnMod.description>貿易用ビーコンのように動作し,周囲を明るく照らすユーティリティ支柱です.倉庫にうってつけです.</OrbitalTradeColumnMod.description>
 
-  <SunColumnMod.label>sun column</SunColumnMod.label>
-  <SunColumnMod.description>A utility column, acts like a sun lamp and keeps your room warm, perfect for greenhouses. Automatically turns itself off at night.</SunColumnMod.description>
-  <SunColumnMod.comps.CompSchedule.offMessage>Off for plant resting period</SunColumnMod.comps.CompSchedule.offMessage>
+  <!-- EN: sun column -->
+  <SunColumnMod.label>太陽の柱</SunColumnMod.label>
+  <!-- EN: A utility column, acts like a sun lamp and keeps your room warm, perfect for greenhouses. Automatically turns itself off at night. -->
+  <SunColumnMod.description>太陽灯のように動作し、部屋を暖かく維持するユーティリティ支柱です.温室にうってつけです.夜になると自動的に消灯します.</SunColumnMod.description>
+  <!-- EN: Off for plant resting period -->
+  <SunColumnMod.comps.CompSchedule.offMessage>植物が眠っている間はOFF</SunColumnMod.comps.CompSchedule.offMessage>
 
   <IceColumnMod.label>frozen column</IceColumnMod.label>
   <IceColumnMod.description>A utility column, acts like a cooler, keeps the room at -15°C and emits blue light, perfect for fridges.</IceColumnMod.description>
