@@ -258,7 +258,8 @@
     </building>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
-    </researchPrerequisites>
+	  <li>MicroelectronicsBasics</li>
+	</researchPrerequisites>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
@@ -366,6 +367,7 @@
     </building>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
+	  <li>AirConditioning</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
@@ -461,6 +463,7 @@
     </building>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
+	  <li>AirConditioning</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
@@ -702,6 +705,7 @@
 		</placeWorkers>
 		<researchPrerequisites>
 			<li>DetColumnRes</li>
+			<li>BiofuelRefining</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<holdsRoof>true</holdsRoof>
