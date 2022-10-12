@@ -7,6 +7,7 @@ using Verse;
 
 namespace RimWorldColumns
 {
+    [StaticConstructorOnStartup]
     public class Building_RepairColumn : BuildingWithOverlay, IFXObject
     {       
         private static readonly Material RepairMat = MaterialPool.MatFrom("Misc/NeedRepair", ShaderDatabase.Transparent);
@@ -49,14 +50,15 @@ namespace RimWorldColumns
 
         private Dictionary<Thing, Effecter> repairEffects = new Dictionary<Thing, Effecter>();
 
-        private void StartEffectFor(Thing building)
+        private void StartEffectFor(Thing building, out Effecter effecterRes)
         {
+            effecterRes = null;
             if (!repairEffects.TryGetValue(building, out var effecter))
             {
                 effecter = UCDefOf.ColumnSettings.repairEffecter.Spawn();
                 repairEffects.Add(building, effecter);
             }
-            effecter.EffectTick(building,building);
+            effecterRes = effecter;
         }
 
         private void EndEffectFor(Thing building)
@@ -78,9 +80,15 @@ namespace RimWorldColumns
                     var hp = (int) Mathf.CeilToInt(building.def.BaseMaxHitPoints * UCDefOf.ColumnSettings.repairPercent);
                     if (RefuelComp.Fuel <= hp) continue;
                     
-                    StartEffectFor(building);
+                    StartEffectFor(building, out var effecter);
                     building.HitPoints = Mathf.Min(building.HitPoints + hp, building.MaxHitPoints);
                     RefuelComp.ConsumeFuel(hp);
+
+                    //
+                    for (int i = 0; i <= 10; i++)
+                    {
+                        effecter.EffectTick(building,building);
+                    }
                     
                     if(building.HitPoints == building.MaxHitPoints)
                         EndEffectFor(building);
