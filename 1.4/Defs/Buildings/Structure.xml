@@ -850,7 +850,7 @@
 		<description>An ancient archotech cube platform, repurposed as a column.</description>
 		<thingClass>RimWorldColumns.Building_RepairColumn</thingClass>
 		<graphicData>
-			<drawSize>(1.5,1.5)</drawSize>
+			<drawSize>(2,2)</drawSize>
 			<drawOffset>(0,0,0.3)</drawOffset>
 			<texPath>Buildings/ArchoColumn/ArchoColumnBase</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
@@ -870,12 +870,13 @@
 			<WorkToBuild>15000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
-			<Beauty>150</Beauty>
+			<Beauty>250</Beauty>
 		</statBases>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<size>(3,3)</size>
 		<fillPercent>0.25</fillPercent>
-		<specialDisplayRadius>7.9</specialDisplayRadius>
+		<specialDisplayRadius>3.9</specialDisplayRadius>
 		<costList>
 			<ComponentArchoDrone>1</ComponentArchoDrone>
 			<ComponentSpacer>5</ComponentSpacer>
@@ -885,7 +886,7 @@
 				<overlays>
 					<li>
 						<data>
-							<drawSize>(3,3)</drawSize>
+							<drawSize>(4,4)</drawSize>
 							<drawOffset>(0,0,0.3)</drawOffset>
 							<texPath>Buildings/ArchoColumn/ArchoColumnFloor</texPath>
 							<graphicClass>Graphic_Random</graphicClass>
@@ -895,7 +896,7 @@
 					</li>
 					<li>
 						<data>
-							<drawSize>(1.5,1.5)</drawSize>
+							<drawSize>(2,2)</drawSize>
 							<drawOffset>(0,0,0.3)</drawOffset>
 							<texPath>Buildings/ArchoColumn/ArchoColumnGlow</texPath>
 							<graphicClass>Graphic_Random</graphicClass>
@@ -905,7 +906,7 @@
 					</li>
 					<li>
 						<data>
-							<drawSize>(1.5,1.5)</drawSize>
+							<drawSize>(2,2)</drawSize>
 							<drawOffset>(0,0,0.3)</drawOffset>
 							<texPath>Buildings/ArchoColumn/ArchoColumnGlow</texPath>
 							<graphicClass>Graphic_Random</graphicClass>
@@ -916,16 +917,16 @@
 				</overlays>
 			</li>
 			<li Class="CompProperties_Refuelable">
-				<fuelLabel>repair material</fuelLabel>
-				<fuelGizmoLabel>repair material</fuelGizmoLabel>
+				<fuelLabel>material</fuelLabel>
+				<fuelGizmoLabel>material</fuelGizmoLabel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Steel</li>
 					</thingDefs>
 				</fuelFilter>
-				<fuelCapacity>128</fuelCapacity>
+				<fuelCapacity>100</fuelCapacity>
 				<initialFuelPercent>0</initialFuelPercent>
-				<autoRefuelPercent>1</autoRefuelPercent>
+				<autoRefuelPercent>5</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>0</minimumFueledThreshold>
 				<fuelMultiplier>1</fuelMultiplier>
@@ -942,13 +943,8 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Glower">
-				<glowRadius>11</glowRadius>
+				<glowRadius>9</glowRadius>
 				<glowColor>(217,217,208,0)</glowColor>
-			</li>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<shortCircuitInRain>false</shortCircuitInRain>
-				<basePowerConsumption>3500</basePowerConsumption>
 			</li>
 		</comps>
 		<tickerType>Normal</tickerType>

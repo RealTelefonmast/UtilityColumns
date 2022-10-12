@@ -14,9 +14,9 @@
 			<li>GraveColumnMod</li>
 		</columnsForRoomRequirement>
 		<repairEffecter>Repair</repairEffecter>
-		<repairColumnRange>7.9</repairColumnRange>
+		<repairColumnRange>3.9</repairColumnRange>
 		<repairPercent>0.01</repairPercent>
-		<repairIntervalSeconds>1.2</repairIntervalSeconds>
+		<repairIntervalSeconds>12</repairIntervalSeconds>
 	</RimWorldColumns.RWCSettingsDef>
 
 </Defs>
