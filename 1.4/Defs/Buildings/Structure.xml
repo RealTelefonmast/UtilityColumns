@@ -847,7 +847,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>ArchotechDroneColumn</defName>
 		<label>Archo Column</label>
-		<description>An ancient archotech cube platform, repurposed as a column. Consumes small amount of steel to repairs all equipable items in nearby stockpile area.</description>
+		<description>An ancient archotech cube platform, repurposed as a column. Consumes plasteel to repairs all equipable items in nearby stockpile area.</description>
 		<thingClass>RimWorldColumns.Building_RepairColumn</thingClass>
 		<graphicData>
 			<drawSize>(2,2)</drawSize>
