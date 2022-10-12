@@ -10,10 +10,10 @@ namespace RimWorldColumns
     public class Building_RepairColumn : BuildingWithOverlay, IFXObject
     {       
         private static readonly Material RepairMat = MaterialPool.MatFrom("Misc/NeedRepair", ShaderDatabase.Transparent);
-        
+
         //
-        public Vector3[] DrawPositions => new[] {DrawPos};
-        public bool[] DrawBools => new[] {true};
+        public Vector3[] DrawPositions => new[] {DrawPos, DrawPos, DrawPos};
+        public bool[] DrawBools => new[] {true, true, true};
         
         //
         private IntVec3[] _areaCells;
@@ -41,25 +41,25 @@ namespace RimWorldColumns
         public override void Tick()
         {
             base.Tick();
-            if (RefuelComp.HasFuel && this.IsHashIntervalTick(100))
+            if (RefuelComp.HasFuel && this.IsHashIntervalTick(UCDefOf.ColumnSettings.RepairIntervalTicks))
             {
                 RepairBuildingsInRange();
             }
         }
 
-        private Dictionary<Building, Effecter> repairEffects = new Dictionary<Building, Effecter>();
+        private Dictionary<Thing, Effecter> repairEffects = new Dictionary<Thing, Effecter>();
 
-        private void StartEffectFor(Building building)
+        private void StartEffectFor(Thing building)
         {
             if (!repairEffects.TryGetValue(building, out var effecter))
             {
-                effecter = building.def.repairEffect.Spawn();
+                effecter = UCDefOf.ColumnSettings.repairEffecter.Spawn();
                 repairEffects.Add(building, effecter);
             }
-            effecter.EffectTick(null,building);
+            effecter.EffectTick(building,building);
         }
 
-        private void EndEffectFor(Building building)
+        private void EndEffectFor(Thing building)
         {
             if (repairEffects.TryGetValue(building, out var effecter))
             {
@@ -75,7 +75,7 @@ namespace RimWorldColumns
             {
                 foreach (var building in repairables)
                 {
-                    var hp = (int) (building.def.BaseMaxHitPoints * 0.01f);
+                    var hp = (int) Mathf.CeilToInt(building.def.BaseMaxHitPoints * UCDefOf.ColumnSettings.repairPercent);
                     if (RefuelComp.Fuel <= hp) continue;
                     
                     StartEffectFor(building);
@@ -88,22 +88,28 @@ namespace RimWorldColumns
             }
         }
 
-        public IEnumerable<Building> Repairables()
+        private IEnumerable<Thing> Repairables()
         {
-            List<Building> building = new List<Building>();
-            for (int i =0; i < AreaCells.Length; i++)
+            for (int i = 0; i < AreaCells.Length; i++)
             {
                 var cell = AreaCells[i];
-                var b = cell.GetFirstBuilding(Map);
-                if(b == null) continue;
-                if(!b.Position.InBounds(Map)) continue;
-                if(!b.def.BuildableByPlayer) continue;
-                if(!b.def.BuildableByPlayer) continue;
-                if (b.HitPoints < b.MaxHitPoints)
-                    yield return b;
+                if (!cell.InBounds(Map)) continue;
+                var b = cell.GetItems(Map);
+                foreach (var t in b)
+                {
+                    if(t == null) continue;
+                    //if(t.def.equipmentType == EquipmentType.None) continue;
+                    if (t.def.IsWeapon || t.def.IsApparel)
+                    {
+                        if (t.IsInValidStorage())
+                        {
+                            if (t.HitPoints < t.MaxHitPoints)
+                                yield return t;
+                        }
+                    }
+                }
             }
         }
-
 
         public override void Draw()
         {

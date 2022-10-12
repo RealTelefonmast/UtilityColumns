@@ -893,10 +893,16 @@
 						</data>
 						<needsPower>true</needsPower>
 					</li>
-				</overlays>
-			</li>
-			<li Class="RimWorldColumns.CompProperties_Overlays">
-				<overlays>
+					<li>
+						<data>
+							<drawSize>(1.5,1.5)</drawSize>
+							<drawOffset>(0,0,0.3)</drawOffset>
+							<texPath>Buildings/ArchoColumn/ArchoColumnGlow</texPath>
+							<graphicClass>Graphic_Random</graphicClass>
+							<shaderType>MoteGlow</shaderType>
+						</data>
+						<needsPower>true</needsPower>
+					</li>
 					<li>
 						<data>
 							<drawSize>(1.5,1.5)</drawSize>
