@@ -731,7 +731,7 @@
     <description>An ornamented burial column for the honored dead. Designed to keep a dead person for many years.\n\nAltman be praised.</description>
     <thingClass>Building_Sarcophagus</thingClass>
     <graphicData>
-			<drawSize>(2.5,2.5)</drawSize>
+			<drawSize>(3,3)</drawSize>
 			<texPath>Buildings/GraColumn_Base</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
@@ -742,7 +742,7 @@
 			</damageData>
     </graphicData>
 	<uiIconPath>Buildings/GraColumn</uiIconPath>
-    <size>(2,2)</size>
+    <size>(3,3)</size>
     <fillPercent>0.5</fillPercent>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Building</altitudeLayer>
@@ -753,7 +753,7 @@
       <preventDeteriorationInside>false</preventDeteriorationInside>
       <haulToContainerDuration>750</haulToContainerDuration>
       <fullGraveGraphicData>
-			<drawSize>(2.5,2.5)</drawSize>
+			<drawSize>(3,3)</drawSize>
 			<texPath>Buildings/GraColumn_Overlay</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<damageData>
@@ -847,11 +847,11 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>ArchotechDroneColumn</defName>
 		<label>Archo Column</label>
-		<description>An ancient archotech cube platform, repurposed as a column.</description>
+		<description>An ancient archotech cube platform, repurposed as a column. Consumes small amount of steel to repairs all equipable items in nearby stockpile area.</description>
 		<thingClass>RimWorldColumns.Building_RepairColumn</thingClass>
 		<graphicData>
 			<drawSize>(2,2)</drawSize>
-			<drawOffset>(0,0,0.3)</drawOffset>
+			<drawOffset>(0,0,0.5)</drawOffset>
 			<texPath>Buildings/ArchoColumn/ArchoColumnBase</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 			<damageData>
@@ -887,7 +887,7 @@
 					<li>
 						<data>
 							<drawSize>(4,4)</drawSize>
-							<drawOffset>(0,0,0.3)</drawOffset>
+							<drawOffset>(0,0,0.5)</drawOffset>
 							<texPath>Buildings/ArchoColumn/ArchoColumnFloor</texPath>
 							<graphicClass>Graphic_Random</graphicClass>
 							<shaderType>MoteGlow</shaderType>
@@ -897,17 +897,7 @@
 					<li>
 						<data>
 							<drawSize>(2,2)</drawSize>
-							<drawOffset>(0,0,0.3)</drawOffset>
-							<texPath>Buildings/ArchoColumn/ArchoColumnGlow</texPath>
-							<graphicClass>Graphic_Random</graphicClass>
-							<shaderType>MoteGlow</shaderType>
-						</data>
-						<needsPower>true</needsPower>
-					</li>
-					<li>
-						<data>
-							<drawSize>(2,2)</drawSize>
-							<drawOffset>(0,0,0.3)</drawOffset>
+							<drawOffset>(0,0,0.5)</drawOffset>
 							<texPath>Buildings/ArchoColumn/ArchoColumnGlow</texPath>
 							<graphicClass>Graphic_Random</graphicClass>
 							<shaderType>MoteGlow</shaderType>
@@ -921,29 +911,29 @@
 				<fuelGizmoLabel>material</fuelGizmoLabel>
 				<fuelFilter>
 					<thingDefs>
-						<li>Steel</li>
+						<li>Plasteel</li>
 					</thingDefs>
 				</fuelFilter>
-				<fuelCapacity>100</fuelCapacity>
+				<fuelCapacity>150</fuelCapacity>
 				<initialFuelPercent>0</initialFuelPercent>
-				<autoRefuelPercent>5</autoRefuelPercent>
+				<autoRefuelPercent>0.05</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>0</minimumFueledThreshold>
-				<fuelMultiplier>1</fuelMultiplier>
+				<fuelMultiplier>2</fuelMultiplier>
 				<factorByDifficulty>true</factorByDifficulty>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<outOfFuelMessage>Cannot repair: Needs material</outOfFuelMessage>
-				<fuelIconPath>Misc/Blank</fuelIconPath>
+				<fuelIconPath>Misc/NeedMaterial</fuelIconPath>
 			</li>
 			<li Class="CompProperties_MoteEmitter">
 				<mote>Mote_PsychicConditionCauserEffect</mote>
-				<emissionInterval>15000</emissionInterval>
+				<emissionInterval>3600</emissionInterval>
 				<soundOnEmission>Archonexus_Throb</soundOnEmission>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Glower">
-				<glowRadius>9</glowRadius>
+				<glowRadius>12</glowRadius>
 				<glowColor>(217,217,208,0)</glowColor>
 			</li>
 		</comps>
@@ -990,6 +980,7 @@
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5.0</Mass>
 			<Flammability>0</Flammability>
+			<Beauty>150</Beauty>
 		</statBases>
 		<thingCategories>
 			<li>Items</li>

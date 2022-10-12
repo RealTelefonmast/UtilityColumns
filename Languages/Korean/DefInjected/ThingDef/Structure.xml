@@ -23,6 +23,9 @@
   <FlameColumnMod.label>화염 기둥</FlameColumnMod.label>
   <FlameColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 화염 폭발 공격을 가하며, 작은 조명등이 달려 있습니다.</FlameColumnMod.description>
 
+  <ArchotechDroneColumn.label>초월 기둥</ArchotechDroneColumn.label>
+  <ArchotechDroneColumn.description>초월기술의 유산으로 만들어진 기계 기둥입니다. 지붕을 지탱하고, 플라스틸을 소모하여 주변 저장 공간에 보관된 모든 장착 가능한 장비들을 천천히 수리합니다.</ArchotechDroneColumn.description>
+
   <DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>장전된 파편</DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>
   <DetColumnMod.comps.CompRefuelable.fuelLabel>장전된 파편</DetColumnMod.comps.CompRefuelable.fuelLabel>
   <DetColumnMod.comps.CompRefuelable.outOfFuelMessage>재장전 필요</DetColumnMod.comps.CompRefuelable.outOfFuelMessage>
@@ -31,10 +34,12 @@
   <FlameColumnMod.comps.CompRefuelable.fuelLabel>장전된 연료</FlameColumnMod.comps.CompRefuelable.fuelLabel>
   <FlameColumnMod.comps.CompRefuelable.outOfFuelMessage>재장전 필요</FlameColumnMod.comps.CompRefuelable.outOfFuelMessage>
 
+  <ArchotechDroneColumn.comps.CompRefuelable.fuelGizmoLabel>충전된 재료</ArchotechDroneColumn.comps.CompRefuelable.fuelGizmoLabel>
+  <ArchotechDroneColumn.comps.CompRefuelable.fuelLabel>충전된 재료</ArchotechDroneColumn.comps.CompRefuelable.fuelLabel>
+  <ArchotechDroneColumn.comps.CompRefuelable.outOfFuelMessage>재료 필요</ArchotechDroneColumn.comps.CompRefuelable.outOfFuelMessage>
+
   <GraveColumnMod.label>성소 기둥</GraveColumnMod.label>
   <GraveColumnMod.description>영예롭게 죽은 자들을 기리기 위한 장식 기둥입니다. 지붕을 지탱하고, 시신을 썩지 않는 상태로 보존할 수 있습니다.</GraveColumnMod.description>
 
-  <ArchotechDroneColumn.label>초월 기둥</ArchotechDroneColumn.label>
-  <ArchotechDroneColumn.description>고대 초월 큐브에 고급 부품들을 주의깊게 이어붙여 정상적으로 작동하도록 개조한 장치입니다. 기둥으로 사용할 수 있습니다.</ArchotechDroneColumn.description>
 
 </LanguageData>
