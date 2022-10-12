@@ -15,12 +15,20 @@ namespace RimWorldColumns
         //public List<IntVec3>[] Sectors = new List<IntVec3>[4];
         public List<ClaymoreCharge> Charges;
 
+        public ColumnExtension Extension { get; private set; }
+        public CompRefuelable RefuelComp { get; private set; }
+        public CompPowerTrader PowerComp { get; private set; }
+        
         public Vector3[] DrawPositions => new Vector3[1] { DrawPos };
         public bool[] DrawBools => new bool[1] { RefuelComp.HasFuel || Charges.Any(c => c.Detonating) };
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
+            Extension = def.GetModExtension<ColumnExtension>();
+            RefuelComp = GetComp<CompRefuelable>();
+            PowerComp = GetComp<CompPowerTrader>();
+            
             if (Charges.NullOrEmpty())
             {
                 Charges = new List<ClaymoreCharge>()
@@ -72,10 +80,6 @@ namespace RimWorldColumns
             //GenDraw.DrawFieldEdges(Charges[2].explosionCells, Color.blue);
             //GenDraw.DrawFieldEdges(Charges[3].explosionCells, Color.yellow);
         }
-
-        public ColumnExtension Extension => def.GetModExtension<ColumnExtension>();
-        public CompRefuelable RefuelComp => this.GetComp<CompRefuelable>();
-        public CompPowerTrader PowerComp => this.GetComp<CompPowerTrader>();
 
         //TODO: Add Warning message
         public override string GetInspectString()

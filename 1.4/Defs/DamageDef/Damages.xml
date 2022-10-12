@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>ClaymoreExplosion</defName>
+		<label>explosion</label>
+		<thingClass>RimWorldColumns.Explosion_Directed</thingClass>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+
+</Defs>

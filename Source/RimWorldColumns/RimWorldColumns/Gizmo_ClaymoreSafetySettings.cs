@@ -19,7 +19,7 @@ namespace RimWorldColumns
 
         public Gizmo_ClaymoreSafetySettings()
         {
-            this.order = -100;
+            this.Order = -100;
         }
 
         private static Vector2 Size = new Vector2(160, 115);
