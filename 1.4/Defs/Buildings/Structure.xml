@@ -880,6 +880,7 @@
 		<costList>
 			<ComponentArchoDrone>1</ComponentArchoDrone>
 			<ComponentSpacer>5</ComponentSpacer>
+			<Plasteel>100</Plasteel>
 		</costList>
 		<comps>
 			<li Class="RimWorldColumns.CompProperties_Overlays">
@@ -914,12 +915,12 @@
 						<li>Plasteel</li>
 					</thingDefs>
 				</fuelFilter>
-				<fuelCapacity>150</fuelCapacity>
-				<initialFuelPercent>0</initialFuelPercent>
+				<fuelCapacity>500</fuelCapacity>
+				<initialFuelPercent>100</initialFuelPercent>
 				<autoRefuelPercent>0.05</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>0</minimumFueledThreshold>
-				<fuelMultiplier>2</fuelMultiplier>
+				<fuelMultiplier>5</fuelMultiplier>
 				<factorByDifficulty>true</factorByDifficulty>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<outOfFuelMessage>Cannot repair: Needs material</outOfFuelMessage>
@@ -940,7 +941,7 @@
 		<tickerType>Normal</tickerType>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<killedLeavings>
-			<ChunkSlagSteel>1</ChunkSlagSteel>
+			<ComponentArchoDrone>1</ComponentArchoDrone>
 		</killedLeavings>
 		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
@@ -977,7 +978,7 @@
 		<useHitPoints>true</useHitPoints>
 		<statBases>
 			<MarketValue>1500</MarketValue>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>5.0</Mass>
 			<Flammability>0</Flammability>
 			<Beauty>150</Beauty>
