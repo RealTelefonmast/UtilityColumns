@@ -12,11 +12,12 @@
 			<li>DetColumnMod</li>
 			<li>FlameColumnMod</li>
 			<li>GraveColumnMod</li>
+			<li>ArchotechDroneColumn</li>
 		</columnsForRoomRequirement>
 		
 		<repairEffecter>Repair</repairEffecter>
 		<repairColumnRange>3.9</repairColumnRange>
-		<repairThingCount>5</repairThingCount>
+		<repairThingCount>10</repairThingCount>
 		<repairHPAmount>2</repairHPAmount>
 		<repairIntervalSeconds>12</repairIntervalSeconds>
 	</RimWorldColumns.RWCSettingsDef>
