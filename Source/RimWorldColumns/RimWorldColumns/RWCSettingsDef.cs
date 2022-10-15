@@ -12,7 +12,8 @@ namespace RimWorldColumns
         public List<ThingDef> columnsForRoomRequirement;
         public EffecterDef repairEffecter;
         public float repairColumnRange = 7.9f;
-        public float repairPercent = 0.01f;
+        public int repairThingCount = 1;
+        public int repairHPAmount = 1;
         public float repairIntervalSeconds = 1.2f;
 
         public int RepairIntervalTicks => repairIntervalSeconds.SecondsToTicks();

@@ -72,32 +72,35 @@ namespace RimWorldColumns
         
         private void RepairBuildingsInRange()
         {
-            var repairables = Repairables();
-            if (repairables.Any())
+            var repairables = Repairables().TakeRandom(10);
+            var enumerable = repairables as Thing[] ?? repairables.ToArray();
+            if (!enumerable.Any()) return;
+            
+            //
+            foreach (var building in enumerable)
             {
-                foreach (var building in repairables)
-                {
-                    var hp = (int) Mathf.CeilToInt(building.def.BaseMaxHitPoints * UCDefOf.ColumnSettings.repairPercent);
-                    if (RefuelComp.Fuel <= hp) continue;
+                var hp = Mathf.CeilToInt(UCDefOf.ColumnSettings.repairHPAmount); //building.def.BaseMaxHitPoints *
+                hp = (int) Mathf.Min(hp, RefuelComp.Fuel);
+                if (hp == 0) continue;
                     
-                    StartEffectFor(building, out var effecter);
-                    building.HitPoints = Mathf.Min(building.HitPoints + hp, building.MaxHitPoints);
-                    RefuelComp.ConsumeFuel(hp);
+                StartEffectFor(building, out var effecter);
+                building.HitPoints = Mathf.Min(building.HitPoints + hp, building.MaxHitPoints);
+                RefuelComp.ConsumeFuel(hp);
 
-                    //
-                    for (int i = 0; i <= 10; i++)
-                    {
-                        effecter.EffectTick(building,building);
-                    }
-                    
-                    if(building.HitPoints == building.MaxHitPoints)
-                        EndEffectFor(building);
+                //
+                for (int i = 0; i <= 10; i++)
+                {
+                    effecter.EffectTick(building,building);
                 }
+                    
+                if(building.HitPoints == building.MaxHitPoints)
+                    EndEffectFor(building);
             }
         }
 
-        private IEnumerable<Thing> Repairables()
+        private List<Thing> Repairables()
         {
+            var list = new List<Thing>();
             for (int i = 0; i < AreaCells.Length; i++)
             {
                 var cell = AreaCells[i];
@@ -112,11 +115,13 @@ namespace RimWorldColumns
                         if (t.IsInValidStorage())
                         {
                             if (t.HitPoints < t.MaxHitPoints)
-                                yield return t;
+                                list.Add(t);
                         }
                     }
                 }
             }
+
+            return list;
         }
 
         public override void Draw()

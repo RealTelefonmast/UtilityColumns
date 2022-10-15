@@ -923,7 +923,7 @@
 				<factorByDifficulty>true</factorByDifficulty>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<outOfFuelMessage>Cannot repair: Needs material</outOfFuelMessage>
-				<fuelIconPath>Misc/NeedMaterial</fuelIconPath>
+				<fuelIconPath>Misc/Blank</fuelIconPath>
 			</li>
 			<li Class="CompProperties_MoteEmitter">
 				<mote>Mote_PsychicConditionCauserEffect</mote>
