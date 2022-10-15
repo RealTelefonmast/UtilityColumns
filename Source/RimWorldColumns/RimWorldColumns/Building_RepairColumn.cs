@@ -141,5 +141,31 @@ namespace RimWorldColumns
                 }
             }
         }
+
+        private void MakeMatchingStockpile()
+        {
+            Designator des = DesignatorUtility.FindAllowedDesignator<Designator_ZoneAddStockpile_Resources>();
+            des.DesignateMultiCell(from c in _areaCells where des.CanDesignateCell(c).Accepted select c);
+        }
+        
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            foreach (Gizmo gizmo in base.GetGizmos())
+            {
+                yield return gizmo;
+            }
+            
+            if (DesignatorUtility.FindAllowedDesignator<Designator_ZoneAddStockpile_Resources>() != null)
+            {
+                yield return new Command_Action
+                {
+                    action = MakeMatchingStockpile,
+                    hotKey = KeyBindingDefOf.Misc1,
+                    defaultDesc = "CommandMakeBeaconStockpileDesc".Translate(),
+                    icon = ContentFinder<Texture2D>.Get("UI/Designators/ZoneCreate_Stockpile", true),
+                    defaultLabel = "CommandMakeBeaconStockpileLabel".Translate()
+                };
+            }
+        }
     }
 }
