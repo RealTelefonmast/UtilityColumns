@@ -512,7 +512,7 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>75</Steel>
+			<Steel>100</Steel>
 			<Plasteel>5</Plasteel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
@@ -551,7 +551,7 @@
 					</thingDefs>
 				</fuelFilter>
 				<fuelCapacity>25</fuelCapacity>
-				<initialFuelPercent>0</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>
 				<autoRefuelPercent>0.9</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>10</minimumFueledThreshold>
@@ -597,6 +597,7 @@
 				<damageType>Bomb</damageType>
 				<postExplosionSpawnThingDef>Filth_Ash</postExplosionSpawnThingDef>
 				<postSpawnChance>0.25</postSpawnChance>
+				<chanceToStartFire>0.05</chanceToStartFire>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -640,6 +641,7 @@
 			<Steel>75</Steel>
 			<Plasteel>5</Plasteel>
 			<ComponentIndustrial>3</ComponentIndustrial>
+			<Chemfuel>35</Chemfuel>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -675,8 +677,8 @@
 						<li>Chemfuel</li>
 					</thingDefs>
 				</fuelFilter>
-				<fuelCapacity>35</fuelCapacity>
-				<initialFuelPercent>0</initialFuelPercent>
+				<fuelCapacity>25</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
 				<autoRefuelPercent>0.9</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>10</minimumFueledThreshold>
@@ -723,7 +725,135 @@
 				<damageType>Flame</damageType>
 				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 				<preSpawnChance>0.25</preSpawnChance>
-				<chanceToStartFire>0.6</chanceToStartFire>
+				<chanceToStartFire>0.5</chanceToStartFire>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>EMPColumnMod</defName>
+		<label>pulse column</label>
+		<description>An advanced column for base defense. Upon detecting an enemy in any direction, it will emits a strong pulse and flash into the same direction. Can be reloaded.</description>
+		<thingClass>RimWorldColumns.Building_ClaymoreColumn</thingClass>
+		<graphicData>
+			<drawSize>(1.25,1.25)</drawSize>
+			<drawOffset>(0,0,0.2)</drawOffset>
+			<texPath>Buildings/DetColumn_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Buildings/EColumn</uiIconPath>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>3000</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Mass>25</Mass>
+			<Beauty>-25</Beauty>
+		</statBases>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<fillPercent>0.25</fillPercent>
+		<costList>
+			<Steel>75</Steel>
+			<Plasteel>5</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(90, 150, 226, 0)</glowColor>
+			</li>
+			<li Class="RimWorldColumns.CompProperties_Overlays">
+				<overlays>
+					<li>
+						<data>
+							<drawSize>(1.25,1.25)</drawSize>
+							<drawOffset>(0,0,0.2)</drawOffset>
+							<texPath>Buildings/EColumn_Overlay</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+						</data>
+						<altitude>BuildingOnTop</altitude>
+						<needsPower>false</needsPower>
+					</li>
+				</overlays>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>45</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>fuse</fuelLabel>
+				<fuelGizmoLabel>fuse</fuelGizmoLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>1</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>0</minimumFueledThreshold>
+				<fuelMultiplier>1</fuelMultiplier>
+				<factorByDifficulty>false</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<outOfFuelMessage>Cannot detonate: Needs fuse component</outOfFuelMessage>
+				<fuelIconPath>Misc/Blank</fuelIconPath>
+			</li>
+		</comps>
+		<specialDisplayRadius>7.9</specialDisplayRadius>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</killedLeavings>
+		<pathCost>25</pathCost>
+		<passability>PassThroughOnly</passability>
+		<designationCategory>Security</designationCategory>
+		<rotatable>false</rotatable>
+		<stealable>false</stealable>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_combatDangerous>true</ai_combatDangerous>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_NeverAdjacentTrap</li>
+			<li>RimWorldColumns.PlaceWorker_MinimumDistance</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>DetColumnRes</li>
+			<li>MicroelectronicsBasics</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<holdsRoof>true</holdsRoof>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RimWorldColumns.ColumnExtension">
+				<radius>7.9</radius>
+				<consumptionPercent>1</consumptionPercent>
+				<explosionDamage>50</explosionDamage>
+				<detonationDelay>120</detonationDelay>
+				<damageType>Stun</damageType>
+				<preExplosionSpawnThingDef></preExplosionSpawnThingDef>
+				<preSpawnChance>0</preSpawnChance>
+				<chanceToStartFire>0.05</chanceToStartFire>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -938,7 +1068,7 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Glower">
 				<glowRadius>12</glowRadius>
-				<glowColor>(217,217,208,0)</glowColor>
+				<glowColor>(217,217,208,1)</glowColor>
 			</li>
 		      <li Class="CompProperties_Art">
 		        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>

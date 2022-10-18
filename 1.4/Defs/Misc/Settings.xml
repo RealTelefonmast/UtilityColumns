@@ -11,6 +11,7 @@
 			<li>IceColumnMod</li>
 			<li>DetColumnMod</li>
 			<li>FlameColumnMod</li>
+			<li>EMPColumnMod</li>
 			<li>GraveColumnMod</li>
 			<li>ArchotechDroneColumn</li>
 		</columnsForRoomRequirement>
