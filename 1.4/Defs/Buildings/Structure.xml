@@ -592,8 +592,8 @@
 			<li Class="RimWorldColumns.ColumnExtension">
 				<radius>6.9</radius>
 				<consumptionPercent>1</consumptionPercent>
-				<explosionDamage>75</explosionDamage>
-				<detonationDelay>80</detonationDelay>
+				<explosionDamage>80</explosionDamage>
+				<detonationDelay>100</detonationDelay>
 				<damageType>Bomb</damageType>
 				<postExplosionSpawnThingDef>Filth_Ash</postExplosionSpawnThingDef>
 				<postSpawnChance>0.25</postSpawnChance>
@@ -718,8 +718,8 @@
 			<li Class="RimWorldColumns.ColumnExtension">
 				<radius>6.9</radius>
 				<consumptionPercent>1</consumptionPercent>
-				<explosionDamage>20</explosionDamage>
-				<detonationDelay>80</detonationDelay>
+				<explosionDamage>25</explosionDamage>
+				<detonationDelay>100</detonationDelay>
 				<damageType>Flame</damageType>
 				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 				<preSpawnChance>0.25</preSpawnChance>
