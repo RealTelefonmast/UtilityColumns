@@ -90,7 +90,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>DarkColumnMod</defName>
-    <label>dark column</label>
+    <label>darklight column</label>
     <description>A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source.</description>
     <thingClass>Building</thingClass>
     <graphicData>
@@ -296,7 +296,7 @@
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>3000</WorkToBuild>
       <Flammability>0.05</Flammability>
-      <Beauty>25</Beauty>
+      <Beauty>50</Beauty>
       <Mass>15</Mass>
     </statBases>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -349,6 +349,9 @@
         <heatPerSecond>30</heatPerSecond>
         <heatPushMaxTemperature>2</heatPushMaxTemperature>
       </li>
+	  <li Class="CompProperties_Art">
+		<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+	  </li>
     </comps>
     <specialDisplayRadius>6.9</specialDisplayRadius>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -406,7 +409,7 @@
       <WorkToBuild>3000</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>15</Mass>
-	  <Beauty>15</Beauty>
+	  <Beauty>50</Beauty>
     </statBases>
     <drawerType>MapMeshAndRealTime</drawerType>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
@@ -559,7 +562,7 @@
 				<fuelIconPath>Misc/Blank</fuelIconPath>
 			</li>
 		</comps>
-		<specialDisplayRadius>5.9</specialDisplayRadius>
+		<specialDisplayRadius>6.9</specialDisplayRadius>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -587,7 +590,7 @@
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<modExtensions>
 			<li Class="RimWorldColumns.ColumnExtension">
-				<radius>5.9</radius>
+				<radius>6.9</radius>
 				<consumptionPercent>1</consumptionPercent>
 				<explosionDamage>75</explosionDamage>
 				<detonationDelay>80</detonationDelay>
@@ -684,7 +687,7 @@
 				<fuelIconPath>Misc/Blank</fuelIconPath>
 			</li>
 		</comps>
-		<specialDisplayRadius>5.9</specialDisplayRadius>
+		<specialDisplayRadius>6.9</specialDisplayRadius>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -713,7 +716,7 @@
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<modExtensions>
 			<li Class="RimWorldColumns.ColumnExtension">
-				<radius>5.9</radius>
+				<radius>6.9</radius>
 				<consumptionPercent>1</consumptionPercent>
 				<explosionDamage>20</explosionDamage>
 				<detonationDelay>80</detonationDelay>
@@ -812,7 +815,7 @@
 			<drawAssignmentOverlay>true</drawAssignmentOverlay>
 			<compClass>CompAssignableToPawn_Grave</compClass>
 		</li>
-      <li Class="CompProperties_MeditationFocus">
+      <li Class="CompProperties_MeditationFocus" MayRequire="Ludeon.RimWorld.Royalty">
         <statDef>MeditationFocusStrength</statDef>
         <focusTypes>
           <li>Morbid</li>
@@ -923,7 +926,7 @@
 				<fuelMultiplier>8</fuelMultiplier>
 				<factorByDifficulty>true</factorByDifficulty>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<outOfFuelMessage>Cannot repair: Needs plasteel</outOfFuelMessage>
+				<outOfFuelMessage>Cannot restoration: Needs plasteel</outOfFuelMessage>
 				<fuelIconPath>Misc/NeedMaterial</fuelIconPath>
 			</li>
 			<li Class="CompProperties_MoteEmitter" MayRequire="Ludeon.RimWorld.Ideology">
@@ -937,6 +940,9 @@
 				<glowRadius>12</glowRadius>
 				<glowColor>(217,217,208,0)</glowColor>
 			</li>
+		      <li Class="CompProperties_Art">
+		        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+		      </li>
 		</comps>
 		<tickerType>Normal</tickerType>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
@@ -954,7 +960,7 @@
 		</building>
 		<researchPrerequisites>
 			<li>OrbitalTradeColumnRes</li>
-			<li>AdvancedFabrication</li>
+			<li>Fabrication</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<holdsRoof>true</holdsRoof>
@@ -977,7 +983,7 @@
 		<stackLimit>1</stackLimit>
 		<useHitPoints>true</useHitPoints>
 		<statBases>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>1250</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>5.0</Mass>
 			<Flammability>0</Flammability>
