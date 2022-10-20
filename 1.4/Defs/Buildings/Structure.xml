@@ -1071,6 +1071,8 @@
 				<glowColor>(217,217,208,1)</glowColor>
 			</li>
 		      <li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
 		        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
 		      </li>
 		</comps>
