@@ -871,6 +871,7 @@
     <thingClass>Building_Sarcophagus</thingClass>
     <graphicData>
 			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0.05)</drawOffset>
 			<texPath>Buildings/GraColumn_Base</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
@@ -881,7 +882,7 @@
 			</damageData>
     </graphicData>
 	<uiIconPath>Buildings/GraColumn</uiIconPath>
-    <size>(3,3)</size>
+    <size>(2,2)</size>
     <fillPercent>0.5</fillPercent>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Building</altitudeLayer>
