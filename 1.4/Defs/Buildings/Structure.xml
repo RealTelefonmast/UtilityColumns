@@ -27,7 +27,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>2000</WorkToBuild>
+      <WorkToBuild>2500</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>10</Mass>
       <Beauty>15</Beauty>
@@ -114,7 +114,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>2000</WorkToBuild>
+      <WorkToBuild>2500</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>10</Mass>
       <Beauty>15</Beauty>
@@ -201,7 +201,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>3000</WorkToBuild>
+      <WorkToBuild>5000</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>15</Mass>
     </statBases>
@@ -294,7 +294,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>3000</WorkToBuild>
+      <WorkToBuild>5000</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Beauty>50</Beauty>
       <Mass>15</Mass>
@@ -406,7 +406,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>3000</WorkToBuild>
+      <WorkToBuild>5000</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>15</Mass>
 	  <Beauty>50</Beauty>
@@ -503,7 +503,7 @@
 		</thingCategories>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>3000</WorkToBuild>
+			<WorkToBuild>5000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
 			<Beauty>-25</Beauty>
@@ -629,7 +629,7 @@
 		</thingCategories>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>3000</WorkToBuild>
+			<WorkToBuild>5000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
 			<Beauty>-25</Beauty>
@@ -758,7 +758,7 @@
 		</thingCategories>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>3000</WorkToBuild>
+			<WorkToBuild>5000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
 			<Beauty>-25</Beauty>
@@ -913,7 +913,7 @@
       </defaultStorageSettings>
     </building>
     <statBases>
-      <WorkToBuild>3000</WorkToBuild>
+      <WorkToBuild>10000</WorkToBuild>
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>0</Flammability>
       <Beauty>50</Beauty>
@@ -1000,7 +1000,7 @@
 		<statBases>
 			<MarketValue>15000</MarketValue>
 			<MaxHitPoints>750</MaxHitPoints>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>30000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
 			<Beauty>250</Beauty>
