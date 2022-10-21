@@ -55,10 +55,12 @@
 		</li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Forbiddable"/>
-		<li Class="CompProperties_Glower">
-			<glowRadius>11</glowRadius>
-			<glowColor>(217,217,208,0)</glowColor>
-		</li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(214,148,94,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
 			<shortCircuitInRain>false</shortCircuitInRain>
@@ -90,8 +92,8 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>DarkColumnMod</defName>
-    <label>darklight column</label>
-    <description>A simple mobile column, just dim lights the area. People who prefer to work in darklight are happy with this light source.</description>
+    <label>crystal column</label>
+    <description>A simple mobile column, more beautiful and luxurious than light column.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
@@ -117,13 +119,13 @@
       <WorkToBuild>2500</WorkToBuild>
       <Flammability>0.05</Flammability>
       <Mass>10</Mass>
-      <Beauty>15</Beauty>
+      <Beauty>20</Beauty>
     </statBases>
     <drawerType>MapMeshAndRealTime</drawerType>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <fillPercent>0.25</fillPercent>
     <costList>
-      <Steel>50</Steel>
+      <Steel>60</Steel>
     </costList>
     <comps>
 		<li Class="RimWorldColumns.CompProperties_Overlays">
@@ -143,8 +145,10 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Forbiddable"/>
 		<li Class="CompProperties_Glower">
-			<glowRadius>11</glowRadius>
-			<glowColor>(78, 226, 229, 0)</glowColor>
+			<glowRadius>12</glowRadius>
+			<glowColor>(200,140,160,0)</glowColor>
+			<colorPickerEnabled>true</colorPickerEnabled>
+			<darklightToggle>true</darklightToggle>
 		</li>
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
@@ -235,8 +239,9 @@
 			<basePowerConsumption>60</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Glower">
-			<glowRadius>10</glowRadius>
+			<glowRadius>12</glowRadius>
 			<glowColor>(217,217,208,0)</glowColor>
+			<darklightToggle>true</darklightToggle>
 		</li>
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -436,8 +441,9 @@
 		</li>
       <li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Glower">
-			<glowRadius>11</glowRadius>
+			<glowRadius>12</glowRadius>
 			<glowColor>(125,125,225,0)</glowColor>
+			<darklightToggle>true</darklightToggle>
 		</li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -1069,6 +1075,8 @@
 			<li Class="CompProperties_Glower">
 				<glowRadius>12</glowRadius>
 				<glowColor>(217,217,208,1)</glowColor>
+				<colorPickerEnabled>true</colorPickerEnabled>
+				<darklightToggle>true</darklightToggle>				
 			</li>
 		      <li Class="CompProperties_Art">
 				<nameMaker>NamerArtSculpture</nameMaker>
