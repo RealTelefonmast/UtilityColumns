@@ -10,8 +10,8 @@
     <prerequisites>
       <li>Electricity</li>
     </prerequisites>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>2.60</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>2.1</researchViewY>
   </ResearchProjectDef>
 
 
@@ -24,8 +24,8 @@
     <prerequisites>
       <li>Machining</li>
     </prerequisites>
-	<researchViewX>9.00</researchViewX>
-	<researchViewY>4.80</researchViewY>
+	<researchViewX>5.00</researchViewX>
+	<researchViewY>4.1</researchViewY>
   </ResearchProjectDef>
 
 
