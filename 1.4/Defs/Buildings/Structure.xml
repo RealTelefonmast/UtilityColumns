@@ -354,9 +354,6 @@
         <heatPerSecond>30</heatPerSecond>
         <heatPushMaxTemperature>2</heatPushMaxTemperature>
       </li>
-	  <li Class="CompProperties_Art">
-		<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
-	  </li>
     </comps>
     <specialDisplayRadius>6.9</specialDisplayRadius>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
