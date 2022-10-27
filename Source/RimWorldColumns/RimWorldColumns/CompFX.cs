@@ -32,9 +32,13 @@ namespace RimWorldColumns
 
         public bool CanDraw(int index)
         {
+            if (index >= Graphics.Count) return false;
             if (Graphics[index].data.needsPower && !IsPowered)
                 return false;
-            return FXParent?.DrawBools[index] ?? true;
+
+            if (FXParent == null) return true;
+            if (index >= FXParent.DrawBools.Length) return false;
+            return FXParent.DrawBools[index];
         }
 
         public Vector3 DrawPos(int index)

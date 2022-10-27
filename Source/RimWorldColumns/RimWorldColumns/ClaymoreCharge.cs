@@ -53,6 +53,7 @@ namespace RimWorldColumns
         public bool Obstructed(out IEnumerable<Thing> obstructions)
         {
             obstructions = null;
+            if (!parent.Spawned) return true;
             if (!UsesSafety) return false;
             obstructions = explosionCells.Where(v => v.InBounds(Map)).Select(c => c.GetFirstBuilding(Map)).Where(b => b?.Faction == Faction.OfPlayer);
             return obstructions.Any(); //explosionCells.Any(c => c.InBounds(map) && c.GetFirstBuilding(map) is Building b && b.Faction == Faction.OfPlayer);
