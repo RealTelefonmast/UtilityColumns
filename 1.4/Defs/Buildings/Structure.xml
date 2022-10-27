@@ -851,7 +851,7 @@
 			<li Class="RimWorldColumns.ColumnExtension">
 				<radius>7.9</radius>
 				<consumptionPercent>1</consumptionPercent>
-				<explosionDamage>50</explosionDamage>
+				<explosionDamage>75</explosionDamage>
 				<detonationDelay>120</detonationDelay>
 				<damageType>Stun</damageType>
 				<preExplosionSpawnThingDef></preExplosionSpawnThingDef>
