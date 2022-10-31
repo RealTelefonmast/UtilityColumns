@@ -891,6 +891,7 @@
       <haulToContainerDuration>750</haulToContainerDuration>
       <fullGraveGraphicData>
 			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0.05)</drawOffset>
 			<texPath>Buildings/GraColumn_Overlay</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<damageData>
