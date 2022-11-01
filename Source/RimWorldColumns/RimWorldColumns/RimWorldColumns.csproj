@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BuildingWithOverlay.cs" />
     <Compile Include="Building_ClaymoreColumn.cs" />
+    <Compile Include="Building_IceColumn.cs" />
     <Compile Include="Building_RepairColumn.cs" />
     <Compile Include="ClaymoreCharge.cs" />
     <Compile Include="ColumnExtension.cs" />

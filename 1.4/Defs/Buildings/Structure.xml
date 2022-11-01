@@ -385,7 +385,7 @@
     <defName>IceColumnMod</defName>
     <label>frozen column</label>
     <description>A utility column, acts like a cooler, keeps the room at -15°C and emits blue light, perfect for fridges.</description>
-    <thingClass>Building</thingClass>
+    <thingClass>RimWorldColumns.Building_IceColumn</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
       <drawOffset>(0,0,0.2)</drawOffset>
@@ -400,7 +400,7 @@
       </damageData>
     </graphicData>
 	<uiIconPath>Buildings/IceColumn</uiIconPath>
-    <tickerType>Normal</tickerType>
+    <tickerType>Rare</tickerType>
     <altitudeLayer>Building</altitudeLayer>
     <minifiedDef>MinifiedThing</minifiedDef>
     <thingCategories>
@@ -445,13 +445,21 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>450</basePowerConsumption>
+        <basePowerConsumption>225</basePowerConsumption>
       </li>
-      <li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>-50</heatPerSecond>
-        <heatPushMinTemperature>-15</heatPushMinTemperature>
-      </li>
+		<li Class="CompProperties_TempControl">
+			<energyPerSecond>-21</energyPerSecond>
+			<defaultTargetTemperature>-10</defaultTargetTemperature>
+			<minTargetTemperature>-80</minTargetTemperature>
+			<maxTargetTemperature>0</maxTargetTemperature>
+		</li>
+		<!--
+		<li Class="CompProperties_HeatPusher">
+			<compClass>CompHeatPusherPowered</compClass>
+			<heatPerSecond>-50</heatPerSecond>
+			<heatPushMinTemperature>-15</heatPushMinTemperature>
+		</li>
+		-->
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	<killedLeavings>
