@@ -414,7 +414,6 @@
 	  <Beauty>50</Beauty>
     </statBases>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <fillPercent>0.25</fillPercent>
     <costList>
       <Steel>150</Steel>
@@ -479,7 +478,11 @@
       <li>OrbitalTradeColumnRes</li>
 	  <li>AirConditioning</li>
     </researchPrerequisites>
-    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
+	<placeWorkers>
+      <li>RimWorldColumns.PlaceWorker_IceColumn</li>
+    </placeWorkers>    
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
     <fertility>0</fertility>
