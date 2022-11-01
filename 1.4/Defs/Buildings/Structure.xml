@@ -275,7 +275,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>SunColumnMod</defName>
     <label>sun column</label>
-    <description>A utility column, acts like a sun lamp and keeps your room warm, perfect for greenhouses. Automatically turns itself off at night.</description>
+    <description>A utility column, acts like a big sun lamp and keeps the room temperatue, perfect for greenhouses. Automatically turns itself off at night.</description>
     <thingClass>Building_SunLamp</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
@@ -329,14 +329,14 @@
 		</li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Glower">
-        <overlightRadius>8.25</overlightRadius>
+        <overlightRadius>8.5</overlightRadius>
         <glowRadius>12.9</glowRadius>
         <glowColor>(250,250,250,0)</glowColor>
       </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>3300</basePowerConsumption>
+        <basePowerConsumption>3500</basePowerConsumption>
       </li>
       <li Class="CompProperties_Schedule">
         <!-- Match plant growing times -->
@@ -355,7 +355,7 @@
         <heatPushMaxTemperature>2</heatPushMaxTemperature>
       </li>
     </comps>
-    <specialDisplayRadius>6.9</specialDisplayRadius>
+    <specialDisplayRadius>7.1</specialDisplayRadius>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	<killedLeavings>
 		<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -363,7 +363,7 @@
 	</killedLeavings>
     <pathCost>25</pathCost>
     <passability>PassThroughOnly</passability>
-    <designationCategory>Temperature</designationCategory>
+    <designationCategory>Furniture</designationCategory>
     <rotatable>false</rotatable>
     <stealable>false</stealable>
     <building>
@@ -384,7 +384,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>IceColumnMod</defName>
     <label>frozen column</label>
-    <description>A utility column, acts like a cooler, keeps the room at -15°C and emits blue light, perfect for fridges.</description>
+    <description>A utility column, acts like a big cooler, keeps the room temperature, perfect for fridges.</description>
     <thingClass>RimWorldColumns.Building_IceColumn</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
@@ -444,11 +444,11 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>225</basePowerConsumption>
+        <basePowerConsumption>300</basePowerConsumption>
       </li>
 		<li Class="CompProperties_TempControl">
-			<energyPerSecond>-21</energyPerSecond>
-			<defaultTargetTemperature>-10</defaultTargetTemperature>
+			<energyPerSecond>-50</energyPerSecond>
+			<defaultTargetTemperature>21</defaultTargetTemperature>
 			<minTargetTemperature>-80</minTargetTemperature>
 			<maxTargetTemperature>0</maxTargetTemperature>
 		</li>
