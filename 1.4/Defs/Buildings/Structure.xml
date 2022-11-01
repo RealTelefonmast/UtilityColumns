@@ -927,6 +927,9 @@
           </specialFiltersToDisallow>
         </filter>
       </defaultStorageSettings>
+	  <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
     </building>
     <statBases>
       <WorkToBuild>10000</WorkToBuild>
@@ -986,6 +989,10 @@
       <li>ComplexFurniture</li>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
+    <ritualFocus>
+      <spectateDistance>1</spectateDistance>
+      <allowedSpectateSides>Vertical</allowedSpectateSides>
+    </ritualFocus>
 	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 	<holdsRoof>true</holdsRoof>
 	<canOverlapZones>true</canOverlapZones>
