@@ -41,9 +41,7 @@ namespace RimWorldColumns
                 float energyLimit = compTempControl.Props.energyPerSecond * coolingEnergy * 4.1666665f;
                 float num2 = GenTemperature.ControlTemperatureTempChange(Position, Map, energyLimit, compTempControl.targetTemperature);
                 bool isWorking = !Mathf.Approximately(num2, 0f);
-
-
-                Log.Message($"Cooling energy: {coolingEnergy} | {energyLimit} | {num2} | {isWorking}");
+                
                 CompProperties_Power props = compPowerTrader.Props;
                 if (isWorking)
                 {
