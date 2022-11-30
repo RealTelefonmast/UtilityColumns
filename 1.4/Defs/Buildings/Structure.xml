@@ -444,7 +444,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>300</basePowerConsumption>
+        <basePowerConsumption>400</basePowerConsumption>
       </li>
 		<li Class="CompProperties_TempControl">
 			<energyPerSecond>-50</energyPerSecond>
