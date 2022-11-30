@@ -1140,7 +1140,7 @@
 		<stackLimit>1</stackLimit>
 		<useHitPoints>true</useHitPoints>
 		<statBases>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>2500</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>5.0</Mass>
 			<Flammability>0</Flammability>
@@ -1154,8 +1154,9 @@
 		<tradeTags>
 			<li>ExoticMisc</li>
 		</tradeTags>
+		<tradeNeverStack>true</tradeNeverStack>
 		<thingSetMakerTags>
-			<li>RewardStandardHighFreq</li>
+			<li>RewardStandardCore</li>
 		</thingSetMakerTags>
 	</ThingDef>
 
