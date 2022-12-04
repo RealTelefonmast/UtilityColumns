@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RWC_TooClose>Занадто близько до інших структур! Деякі напрямки можуть бути заблоковані.</RWC_TooClose>
+  <RWC_Obstructed>\nЗаблокований напрям: {0}</RWC_Obstructed>
+  
+</LanguageData>
