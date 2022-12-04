@@ -34,9 +34,9 @@
   <FlameColumnMod.description>Вибухає підпалючи все навколо, може бути перезаряджена.</FlameColumnMod.description>
 
   <EMPColumnMod.label>ЕМП колона</EMPColumnMod.label>
-  <EMPColumnMod.description>Користувалися ЕМП гранатами? Принцип схожиш, допре працює проти механоїдів але проти органічних створінь ні.</EMPColumnMod.description>
+  <EMPColumnMod.description>Користувалися ЕМП гранатами? Принцип схожиш, добре працює проти механоїдів але проти органічних створінь ні.</EMPColumnMod.description>
 
   <ArchotechDroneColumn.label>Архо колона</ArchotechDroneColumn.label>
-  <ArchotechDroneColumn.description>Дивина якась... Поглинає в деякій області пласт-сталь і лагодить речі навколо колони. Чудо технології!</ArchotechDroneColumn.description>
+  <ArchotechDroneColumn.description>Дивина якась... Ремонтує речі навколо себе поглинаючи пласт-сталь. Чудо технології!</ArchotechDroneColumn.description>
 
 </LanguageData>
