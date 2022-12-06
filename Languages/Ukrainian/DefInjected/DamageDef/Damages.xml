@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ClaymoreBomb.label>Касетна бомба</ClaymoreBomb.label>
+  <ClaymoreBomb.deathMessage>{0} пемерло в результаті вибуху.</ClaymoreBomb.deathMessage>
+
+
+</LanguageData>

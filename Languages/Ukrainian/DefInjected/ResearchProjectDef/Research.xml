@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OrbitalTradeColumnRes.label>Додаткові колони</OrbitalTradeColumnRes.label>
+  <OrbitalTradeColumnRes.description>Розблокує для будівлі орбітальну, сонячну, світлову, заморожену и священну колони.</OrbitalTradeColumnRes.description>
+
+  <DetColumnRes.label>Касетна колона</DetColumnRes.label>
+  <DetColumnRes.description>Розблокує для будівлі касетну колону(розкидує касетні заряди).</DetColumnRes.description>
+  
+</LanguageData>

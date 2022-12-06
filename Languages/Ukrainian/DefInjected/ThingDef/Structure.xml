@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LightColumnMod.label>Світлова колона</LightColumnMod.label>
+  <LightColumnMod.description>Проста мобільна колона, свторена для освітлення території.</LightColumnMod.description>
+
+  <OrbitalTradeColumnMod.label>Орбітальна колона</OrbitalTradeColumnMod.label>
+  <OrbitalTradeColumnMod.description>Додаткова колона яка діє як лампа і орбітальний маячок в купі, підходить для розміщення в складах.</OrbitalTradeColumnMod.description>
+
+  <SunColumnMod.label>Сонячна колона</SunColumnMod.label>
+  <SunColumnMod.description>Додаткова колона яка діє як сонячна лампа, допомагає зігріти рослини в теплицях. Автоматично вимикається в ночі.</SunColumnMod.description>
+  <SunColumnMod.comps.CompSchedule.offMessage>Вимикається під час сну рослин.</SunColumnMod.comps.CompSchedule.offMessage>
+
+  <IceColumnMod.label>Заморожувальна колона</IceColumnMod.label>
+  <IceColumnMod.description>Додаткова колона яка підртимує температуру в кімнаті -15 С° і випромінює синє освітлення, ідеально підходить для охолодження приміщень.</IceColumnMod.description>
+
+  <DetColumnMod.label>Касетна колона</DetColumnMod.label>
+  <DetColumnMod.description>Просунута колона для захисту бази. Виявивши ворога в зоні дії, детонує розкидуючи касетні заряди. Може бути перезарядженою.</DetColumnMod.description>
+
+  <DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>фрагмент касети</DetColumnMod.comps.CompRefuelable.fuelGizmoLabel>
+  <DetColumnMod.comps.CompRefuelable.fuelLabel>фрагмент касети</DetColumnMod.comps.CompRefuelable.fuelLabel>
+  <DetColumnMod.comps.CompRefuelable.outOfFuelMessage>Не може вибухнути: потрібна перезарядка.</DetColumnMod.comps.CompRefuelable.outOfFuelMessage>
+
+  <GraveColumnMod.label>Священна колонна</GraveColumnMod.label>
+  <GraveColumnMod.description>Прикрашена могильна колона для віддання поваги давно помершим. Press "F" to pay respects.</GraveColumnMod.description>
+
+  <DarkColumnMod.label>Кристалічна колона</DarkColumnMod.label>
+  <DarkColumnMod.description>Проста колона, схожа за функціоналом до світлової колони але більш гламурна.</DarkColumnMod.description>
+
+  <ComponentArchoDrone.label>Архо куб</ComponentArchoDrone.label>
+  <ComponentArchoDrone.description>Архотек куб, цікаво що він ховає в собі і які сили має?</ComponentArchoDrone.description>
+
+  <FlameColumnMod.label>Магма колона</FlameColumnMod.label>
+  <FlameColumnMod.description>Вибухає підпалючи все навколо, може бути перезаряджена.</FlameColumnMod.description>
+
+  <EMPColumnMod.label>ЕМП колона</EMPColumnMod.label>
+  <EMPColumnMod.description>Користувалися ЕМП гранатами? Принцип схожиш, добре працює проти механоїдів але проти органічних створінь ні.</EMPColumnMod.description>
+
+  <ArchotechDroneColumn.label>Архо колона</ArchotechDroneColumn.label>
+  <ArchotechDroneColumn.description>Дивина якась... Ремонтує речі навколо себе поглинаючи пласт-сталь. Чудо технології!</ArchotechDroneColumn.description>
+
+</LanguageData>
