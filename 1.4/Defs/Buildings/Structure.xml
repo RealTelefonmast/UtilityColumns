@@ -1076,7 +1076,7 @@
 				<autoRefuelPercent>0.05</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>0</minimumFueledThreshold>
-				<fuelMultiplier>8</fuelMultiplier>
+				<fuelMultiplier>5</fuelMultiplier>
 				<factorByDifficulty>true</factorByDifficulty>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<outOfFuelMessage>Cannot restoration: Needs plasteel</outOfFuelMessage>
@@ -1084,7 +1084,7 @@
 			</li>
 			<li Class="CompProperties_MoteEmitter" MayRequire="Ludeon.RimWorld.Ideology">
 				<mote>Mote_PsychicConditionCauserEffect</mote>
-				<emissionInterval>3600</emissionInterval>
+				<emissionInterval>7200</emissionInterval>
 				<soundOnEmission>Archonexus_Throb</soundOnEmission>
 			</li>
 			<li Class="CompProperties_Flickable"/>
