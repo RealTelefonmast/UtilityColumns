@@ -566,7 +566,7 @@
 				</fuelFilter>
 				<fuelCapacity>25</fuelCapacity>
 				<initialFuelPercent>1</initialFuelPercent>
-				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<autoRefuelPercent>0.99</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>10</minimumFueledThreshold>
 				<fuelMultiplier>1</fuelMultiplier>
@@ -612,6 +612,7 @@
 				<postExplosionSpawnThingDef>Filth_Ash</postExplosionSpawnThingDef>
 				<postSpawnChance>0.25</postSpawnChance>
 				<chanceToStartFire>0.05</chanceToStartFire>
+				<!--<screenShakeFactor>0.1</screenShakeFactor>-->
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -693,7 +694,7 @@
 				</fuelFilter>
 				<fuelCapacity>25</fuelCapacity>
 				<initialFuelPercent>1</initialFuelPercent>
-				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<autoRefuelPercent>0.99</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>10</minimumFueledThreshold>
 				<fuelMultiplier>1</fuelMultiplier>
@@ -740,6 +741,7 @@
 				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 				<preSpawnChance>0.25</preSpawnChance>
 				<chanceToStartFire>0.5</chanceToStartFire>
+				<!--<screenShakeFactor>0.1</screenShakeFactor>-->
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -821,7 +823,7 @@
 				</fuelFilter>
 				<fuelCapacity>1</fuelCapacity>
 				<initialFuelPercent>1</initialFuelPercent>
-				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<autoRefuelPercent>0.99</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>0</minimumFueledThreshold>
 				<fuelMultiplier>1</fuelMultiplier>
@@ -867,7 +869,8 @@
 				<damageType>Stun</damageType>
 				<preExplosionSpawnThingDef></preExplosionSpawnThingDef>
 				<preSpawnChance>0</preSpawnChance>
-				<chanceToStartFire>0.05</chanceToStartFire>
+				<chanceToStartFire>0.1</chanceToStartFire>
+				<!--<screenShakeFactor>0.1</screenShakeFactor>-->
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -975,6 +978,19 @@
           </li>
           <li Class="FocusStrengthOffset_GraveCorpseRelationship">
             <offset>0.10</offset>
+          </li>
+          <li Class="FocusStrengthOffset_NearbyGraves">
+            <defs>
+              <li>Grave</li>
+              <li>Sarcophagus</li>
+			  <li>GraveColumnMod</li>
+            </defs>
+            <offsetPerBuilding>0.01</offsetPerBuilding>
+            <radius>9.9</radius>
+            <maxBuildings>4</maxBuildings>
+            <focusPerFullGrave>0.01</focusPerFullGrave>
+            <explanationKey>MeditationFocusPerGrave</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
           </li>
         </offsets>
       </li>
