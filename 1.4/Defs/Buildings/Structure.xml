@@ -1005,6 +1005,9 @@
       <li>ComplexFurniture</li>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+    </placeWorkers>
     <ritualFocus>
       <spectateDistance>1</spectateDistance>
       <allowedSpectateSides>Vertical</allowedSpectateSides>
@@ -1089,7 +1092,7 @@
 				</fuelFilter>
 				<fuelCapacity>1000</fuelCapacity>
 				<initialFuelPercent>1</initialFuelPercent>
-				<autoRefuelPercent>0.05</autoRefuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<minimumFueledThreshold>0</minimumFueledThreshold>
 				<fuelMultiplier>5</fuelMultiplier>
