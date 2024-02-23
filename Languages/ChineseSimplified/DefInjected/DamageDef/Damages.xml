@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- EN: cluster bomb -->
+  <ClaymoreBomb.label>集束炸弹</ClaymoreBomb.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <ClaymoreBomb.deathMessage>{0} 死于爆炸中.</ClaymoreBomb.deathMessage>
+</LanguageData>
