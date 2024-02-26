@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- EN: utiltity columns -->
+  <OrbitalTradeColumnRes.label>公共支柱</OrbitalTradeColumnRes.label>
+  <!-- EN: Unlocks orbital, sun, frozen, sacred column. -->
+  <OrbitalTradeColumnRes.description>解锁太阳光、冷冻、贸易装饰、死者装饰支柱.</OrbitalTradeColumnRes.description>
+
+  <!-- EN: defence columns -->
+  <DetColumnRes.label>防御支柱</DetColumnRes.label>
+  <!-- EN: Unlocks the cluster columns for base defense. -->
+  <DetColumnRes.description>解锁防御性炸弹、火焰支柱</DetColumnRes.description>
+  
+</LanguageData>
