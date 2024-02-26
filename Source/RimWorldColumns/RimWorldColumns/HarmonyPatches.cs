@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -31,29 +31,47 @@ namespace RimWorldColumns
         private static void VEPatch()
         {
             // Patch VE - RoyaltyPatches
-            if (ModLister.GetActiveModWithIdentifier("OskarPotocki.VanillaExpanded.RoyaltyPatches") == null) return;
-            foreach (var d in DefDatabase<RoyalTitleDef>.AllDefs)
+            if (ModLister.GetActiveModWithIdentifier("OskarPotocki.VanillaExpanded.RoyaltyPatches") != null)
             {
-                if(d == null) continue;
-                if (d.bedroomRequirements != null)
+                foreach (var d in DefDatabase<RoyalTitleDef>.AllDefs)
                 {
-                    foreach (var c in d.bedroomRequirements)
+                    if(d == null) continue;
+                    if (d.bedroomRequirements != null)
                     {
-                        if (c is RoomRequirement_ThingAnyOf rr)
-                            AddColumns(ref rr);
+                        foreach (var c in d.bedroomRequirements)
+                        {
+                            if (c is RoomRequirement_ThingAnyOf rr)
+                                AddColumns(ref rr);
+                        }
                     }
-                }
-                if (d.throneRoomRequirements != null)
-                {
-                    foreach (var c in d.throneRoomRequirements)
+                    if (d.throneRoomRequirements != null)
                     {
-                        if (c is RoomRequirement_ThingAnyOf rr)
-                            AddColumns(ref rr);
-                    }
+                        foreach (var c in d.throneRoomRequirements)
+                        {
+                            if (c is RoomRequirement_ThingAnyOf rr)
+                                AddColumns(ref rr);
+                        }
 
+                    }
                 }
             }
             
+            // Patch VE - IdeologyPatches
+            if (ModLister.GetActiveModWithIdentifier("OskarPotocki.VanillaExpanded.IdeologyPatches") != null)
+            {
+                foreach (var d in DefDatabase<PreceptDef>.AllDefs)
+                {
+                    if (d == null) continue;
+                    if (d.buildingRoomRequirements != null)
+                    {
+                        foreach (var c in d.buildingRoomRequirements)
+                        {
+                            if (c is RoomRequirement_ThingAnyOf rr)
+                                AddColumns(ref rr);
+                        }
+                    }
+                }
+            }
             /* 
             if (patched)
                 Log.Message("[Utility Columns] Successfully patched Vanially Expanded - Royaltys Patch");
