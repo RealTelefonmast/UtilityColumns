@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RimWorldColumns.RWCSettingsDef>
+		<defName>ColumnSettings</defName>
+		<columnsForRoomRequirement>
+			<li>LightColumnMod</li>
+			<li>DarkColumnMod</li>
+			<li>OrbitalTradeColumnMod</li>
+			<li>SunColumnMod</li>
+			<li>IceColumnMod</li>
+			<li>DetColumnMod</li>
+			<li>FlameColumnMod</li>
+			<li>EMPColumnMod</li>
+			<li>GraveColumnMod</li>
+			<li>ArchotechDroneColumn</li>
+		</columnsForRoomRequirement>
+		
+		<repairEffecter>Repair</repairEffecter>
+		<repairColumnRange>3.9</repairColumnRange>
+		<repairThingCount>10</repairThingCount>
+		<repairHPAmount>2</repairHPAmount>
+		<repairIntervalSeconds>12</repairIntervalSeconds>
+	</RimWorldColumns.RWCSettingsDef>
+
+</Defs>

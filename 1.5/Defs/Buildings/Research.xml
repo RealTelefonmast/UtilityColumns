@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>OrbitalTradeColumnRes</defName>
+    <label>utility columns</label>
+    <description>Unlocks orbital, sun, frozen, sacred column.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>2.1</researchViewY>
+  </ResearchProjectDef>
+
+
+  <ResearchProjectDef>
+    <defName>DetColumnRes</defName>
+    <label>defence columns</label>
+    <description>Unlocks the cluster columns for base defense.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Machining</li>
+    </prerequisites>
+	<researchViewX>5.00</researchViewX>
+	<researchViewY>4.1</researchViewY>
+  </ResearchProjectDef>
+
+
+
+<!--
+	<ResearchProjectDef>
+		<defName>RepairItems</defName>
+		<label>Item Repair</label>
+		<description>Grants the ability to repair the durability of items.</description>
+		<baseCost>700</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Machining</li>
+		</prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>4.80</researchViewY>
+	</ResearchProjectDef>
+-->
+
+
+</Defs>
