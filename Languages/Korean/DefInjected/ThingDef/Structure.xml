@@ -20,11 +20,30 @@
   <DetColumnMod.label>파편 기둥</DetColumnMod.label>
   <DetColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 일회성 파편 폭발 공격을 가합니다.</DetColumnMod.description>
   
+  <Bullet_DetColumn.label>금속 파편</Bullet_DetColumn.label>
+  
+  <Gun_DetColumn.label>격발장치</Gun_DetColumn.label>
+  <Gun_DetColumn.description>간단한 폭발 장치입니다.</Gun_DetColumn.description>
+  
+  
   <FlameColumnMod.label>화염 기둥</FlameColumnMod.label>
-  <FlameColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 일회성화염 폭발 공격을 가합니다.</FlameColumnMod.description>
+  <FlameColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 일회성 화염 폭발 공격을 가합니다.</FlameColumnMod.description>
+  
+  <Bullet_FlameColumn.label>인화성 연료</Bullet_FlameColumn.label>
+  
+  <Gun_FlameColumn.label>격발장치</Gun_FlameColumn.label>
+  <Gun_FlameColumn.description>간단한 폭발 장치입니다.</Gun_FlameColumn.description>
+  
   
   <EMPColumnMod.label>섬광 기둥</EMPColumnMod.label>
-  <EMPColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 일회성 섬광과 전자파를 내뿜습니다.</EMPColumnMod.description>
+  <EMPColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 주변에 접근한 적에게 일회성 섬광과 전자파를 내뿜어 기절시킵니다.</EMPColumnMod.description>
+
+  <Bullet_EMPColumn.label>섬광탄</Bullet_EMPColumn.label>
+  
+  <Gun_EMPColumn.label>격발장치</Gun_EMPColumn.label>
+  <Gun_EMPColumn.description>간단한 폭발 장치입니다.</Gun_EMPColumn.description>
+
+
 
   <ArchotechDroneColumn.label>초월 기둥</ArchotechDroneColumn.label>
   <ArchotechDroneColumn.description>초월기술의 유산으로 만들어진 기계 기둥입니다. 지붕을 지탱하고, 플라스틸을 소모하여 주변 저장 공간에 보관된 모든 장착 가능한 장비들을 천천히 새것처럼 복원합니다.</ArchotechDroneColumn.description>
