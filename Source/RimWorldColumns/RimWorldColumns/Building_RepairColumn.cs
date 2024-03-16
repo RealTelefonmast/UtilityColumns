@@ -124,9 +124,9 @@ namespace RimWorldColumns
             return list;
         }
 
-        public override void Draw()
+        public override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            base.Draw();
+            base.DrawAt(drawLoc, flip);
             var repairables = Repairables();
             if (repairables.Any())
             {

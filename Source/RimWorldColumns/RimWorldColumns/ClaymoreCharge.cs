@@ -39,7 +39,7 @@ namespace RimWorldColumns
 
         public void ExposeData()
         {
-            DataExposeUtility.BoolArray(ref settings, 3, "settingBools");
+            DataExposeUtility.LookBoolArray(ref settings, 3, "settingBools");
             Scribe_Values.Look(ref ticksUntilDetonation, "ticksUntilDet");
             Scribe_Values.Look(ref direction, "claymoreDir");
             Scribe_References.Look(ref parent, "claymoreParent");
