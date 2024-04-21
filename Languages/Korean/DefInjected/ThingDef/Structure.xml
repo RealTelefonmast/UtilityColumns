@@ -44,6 +44,15 @@
   <Gun_EMPColumn.description>간단한 폭발 장치입니다.</Gun_EMPColumn.description>
 
 
+  <DeadColumnMod.label>모조생명 기둥</DeadColumnMod.label>
+  <DeadColumnMod.description>기지 방어를 위해 설계된 기계 기둥입니다. 지붕을 지탱하고, 근처의 시체를 휘청이는 자로 일으키는 먼지 구름을 방출합니다. 이렇게 만들어진 휘청이는 자는 당신의 적만 공격합니다.</DeadColumnMod.description>
+
+  <Column_Deadlife_Releasing.label>모조생명 구체</Column_Deadlife_Releasing.label>
+  <Bullet_DeadColumn.label>모조생명 구체</Bullet_DeadColumn.label>
+  
+  <Gun_DeadColumn.label>격발장치</Gun_DeadColumn.label>
+  <Gun_DeadColumn.description>간단한 폭발 장치입니다.</Gun_DeadColumn.description>
+
 
   <ArchotechDroneColumn.label>초월 기둥</ArchotechDroneColumn.label>
   <ArchotechDroneColumn.description>초월기술의 유산으로 만들어진 기계 기둥입니다. 지붕을 지탱하고, 플라스틸을 소모하여 주변 저장 공간에 보관된 모든 장착 가능한 장비들을 천천히 새것처럼 복원합니다.</ArchotechDroneColumn.description>
@@ -59,6 +68,10 @@
   <EMPColumnMod.comps.CompRefuelable.fuelGizmoLabel>퓨즈 내구도</EMPColumnMod.comps.CompRefuelable.fuelGizmoLabel>
   <EMPColumnMod.comps.CompRefuelable.fuelLabel>퓨즈 내구도</EMPColumnMod.comps.CompRefuelable.fuelLabel>
   <EMPColumnMod.comps.CompRefuelable.outOfFuelMessage>퓨즈 부품 필요</EMPColumnMod.comps.CompRefuelable.outOfFuelMessage>
+  
+  <DeadColumnMod.comps.CompRefuelable.fuelGizmoLabel>충전된 먼지</DeadColumnMod.comps.CompRefuelable.fuelGizmoLabel>
+  <DeadColumnMod.comps.CompRefuelable.fuelLabel>충전된 먼지</DeadColumnMod.comps.CompRefuelable.fuelLabel>
+  <DeadColumnMod.comps.CompRefuelable.outOfFuelMessage>재충전 필요</DeadColumnMod.comps.CompRefuelable.outOfFuelMessage>
 
 
   <ArchotechDroneColumn.comps.CompRefuelable.fuelGizmoLabel>복원 용량</ArchotechDroneColumn.comps.CompRefuelable.fuelGizmoLabel>

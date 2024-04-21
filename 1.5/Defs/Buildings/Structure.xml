@@ -508,7 +508,7 @@
 		<graphicData>
 			<drawSize>(1.25,1.25)</drawSize>
 			<drawOffset>(0,0,0.2)</drawOffset>
-			<texPath>Buildings/DetColumn_Base</texPath>
+			<texPath>Buildings/DetColumn</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.5, 0.3)</volume>
@@ -537,26 +537,10 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>100</Steel>
-			<Plasteel>10</Plasteel>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>150</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<comps>
-			<li Class="RimWorldColumns.CompProperties_Overlays">
-				<overlays>
-					<li>
-						<data>
-							<drawSize>(1.25,1.25)</drawSize>
-							<drawOffset>(0,0,0.2)</drawOffset>
-							<texPath>Buildings/DetColumn_Overlay</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-							<shaderType>CutoutComplex</shaderType>
-						</data>
-						<altitude>BuildingOnTop</altitude>
-						<needsPower>true</needsPower>
-					</li>
-				</overlays>
-			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>4</glowRadius>
 				<glowColor>(78, 226, 229, 0)</glowColor>
@@ -590,7 +574,7 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</killedLeavings>
 		<pathCost>25</pathCost>
 		<passability>PassThroughOnly</passability>
@@ -598,8 +582,8 @@
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
 		<building>
-			<combatPower>25</combatPower>
-			<ai_combatDangerous>false</ai_combatDangerous>
+			<combatPower>20</combatPower>
+			<ai_combatDangerous>true</ai_combatDangerous>
 			<turretGunDef>Gun_DetColumn</turretGunDef>
 			<turretBurstCooldownTime>0.1</turretBurstCooldownTime>
 			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
@@ -631,15 +615,17 @@
 		<defName>Bullet_DetColumn</defName>
 		<label>cluster fragments</label>
 		<graphicData>
-			<texPath>Misc/Blank</texPath>
+			<texPath>Misc/Bullet_Shredder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.5</drawSize>
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<damageAmountBase>60</damageAmountBase>
+			<damageAmountBase>45</damageAmountBase>
 			<armorPenetrationBase>0.5</armorPenetrationBase>
-			<speed>100</speed>
+			<speed>80</speed>
 			<explosionRadius>3.9</explosionRadius>
 			<explosionDelay>5</explosionDelay>
 		</projectile>
@@ -673,7 +659,7 @@
 				<forcedMissRadius>0.5</forcedMissRadius>
 				<soundCast>GunShotA</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+				<muzzleFlashScale>30</muzzleFlashScale>
 				<consumeFuelPerShot>25</consumeFuelPerShot>
 			</li>
 		</verbs>
@@ -687,7 +673,7 @@
 		<graphicData>
 			<drawSize>(1.25,1.25)</drawSize>
 			<drawOffset>(0,0,0.2)</drawOffset>
-			<texPath>Buildings/DetColumn_Base</texPath>
+			<texPath>Buildings/FColumn</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.5, 0.3)</volume>
@@ -716,27 +702,11 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>75</Steel>
-			<Plasteel>10</Plasteel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-			<Chemfuel>35</Chemfuel>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Chemfuel>25</Chemfuel>
 		</costList>
 		<comps>
-			<li Class="RimWorldColumns.CompProperties_Overlays">
-				<overlays>
-					<li>
-						<data>
-							<drawSize>(1.25,1.25)</drawSize>
-							<drawOffset>(0,0,0.2)</drawOffset>
-							<texPath>Buildings/FColumn_Overlay</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-							<shaderType>CutoutComplex</shaderType>
-						</data>
-						<altitude>BuildingOnTop</altitude>
-						<needsPower>true</needsPower>
-					</li>
-				</overlays>
-		</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>4</glowRadius>
 				<glowColor>(226, 150, 90, 0)</glowColor>
@@ -770,7 +740,7 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</killedLeavings>
 		<pathCost>25</pathCost>
 		<passability>PassThroughOnly</passability>
@@ -778,8 +748,8 @@
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
 		<building>
-			<combatPower>25</combatPower>
-			<ai_combatDangerous>false</ai_combatDangerous>
+			<combatPower>20</combatPower>
+			<ai_combatDangerous>true</ai_combatDangerous>
 			<turretGunDef>Gun_FlameColumn</turretGunDef>
 			<turretBurstCooldownTime>0.1</turretBurstCooldownTime>
 			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
@@ -812,15 +782,17 @@
 		<defName>Bullet_FlameColumn</defName>
 		<label>flame cluster fragments</label>
 		<graphicData>
-			<texPath>Misc/Blank</texPath>
+			<texPath>Misc/Bullet_Flame</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.5</drawSize>
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<damageDef>Flame</damageDef>
-			<damageAmountBase>30</damageAmountBase>
+			<damageAmountBase>20</damageAmountBase>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
-			<speed>100</speed>
+			<speed>80</speed>
 			<explosionRadius>3.9</explosionRadius>
 			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 			<preExplosionSpawnChance>0.3</preExplosionSpawnChance>
@@ -856,7 +828,7 @@
 				<forcedMissRadius>0.5</forcedMissRadius>
 				<soundCast>GunShotA</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+				<muzzleFlashScale>30</muzzleFlashScale>
 				<consumeFuelPerShot>25</consumeFuelPerShot>
 			</li>
 		</verbs>
@@ -871,7 +843,7 @@
 		<graphicData>
 			<drawSize>(1.25,1.25)</drawSize>
 			<drawOffset>(0,0,0.2)</drawOffset>
-			<texPath>Buildings/DetColumn_Base</texPath>
+			<texPath>Buildings/EColumn</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.5, 0.3)</volume>
@@ -890,7 +862,7 @@
 		</thingCategories>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>5000</WorkToBuild>
+			<WorkToBuild>6000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Mass>25</Mass>
 			<Beauty>-25</Beauty>
@@ -900,26 +872,10 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>100</Steel>
-			<Plasteel>25</Plasteel>
+			<Steel>150</Steel>
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<comps>
-		<li Class="RimWorldColumns.CompProperties_Overlays">
-				<overlays>
-					<li>
-						<data>
-							<drawSize>(1.25,1.25)</drawSize>
-							<drawOffset>(0,0,0.2)</drawOffset>
-							<texPath>Buildings/EColumn_Overlay</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-							<shaderType>CutoutComplex</shaderType>
-						</data>
-						<altitude>BuildingOnTop</altitude>
-						<needsPower>true</needsPower>
-					</li>
-				</overlays>
-			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>4</glowRadius>
 				<glowColor>(90, 150, 226, 0)</glowColor>
@@ -953,7 +909,7 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</killedLeavings>
 		<pathCost>25</pathCost>
 		<passability>PassThroughOnly</passability>
@@ -961,8 +917,8 @@
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
 		<building>
-			<combatPower>25</combatPower>
-			<ai_combatDangerous>false</ai_combatDangerous>
+			<combatPower>20</combatPower>
+			<ai_combatDangerous>true</ai_combatDangerous>
 			<turretGunDef>Gun_EMPColumn</turretGunDef>
 			<turretBurstCooldownTime>0.1</turretBurstCooldownTime>
 			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
@@ -995,14 +951,16 @@
 		<defName>Bullet_EMPColumn</defName>
 		<label>stun pulse</label>
 		<graphicData>
-			<texPath>Misc/Blank</texPath>
+			<texPath>Misc/Bullet_EMP</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.5</drawSize>
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<damageDef>Stun</damageDef>
 			<damageAmountBase>30</damageAmountBase>
-			<speed>100</speed>
+			<speed>80</speed> 
 			<explosionRadius>4.9</explosionRadius>
 			<explosionDelay>5</explosionDelay>
 		</projectile>
@@ -1036,11 +994,221 @@
 				<forcedMissRadius>1.9</forcedMissRadius>
 				<soundCast>GunShotA</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+				<muzzleFlashScale>30</muzzleFlashScale>
 				<consumeFuelPerShot>1</consumeFuelPerShot>
 			</li>
 		</verbs>
   </ThingDef>
+  
+  
+
+	<ThingDef ParentName="BuildingBase" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>DeadColumnMod</defName>
+		<label>Deadlife column</label>
+		<description>An advanced column for base defense. Upon detecting an enemy in any direction, it will raise nearby human and animal corpses as shamblers. The shamblers will only attack your enemies.</description>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<drawSize>(1.25,1.25)</drawSize>
+			<drawOffset>(0,0,0.2)</drawOffset>
+			<texPath>Buildings/DColumn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Buildings/DColumn</uiIconPath>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>7000</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Mass>25</Mass>
+			<Beauty>-25</Beauty>
+			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+		</statBases>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<fillPercent>0.25</fillPercent>
+		<costList>
+			<Steel>150</Steel>
+			<Bioferrite>15</Bioferrite>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="RimWorldColumns.CompProperties_Overlays">
+				<overlays>
+					<li>
+						<data>
+							<drawSize>(1.25,1.25)</drawSize>
+							<drawOffset>(0,0,0.2)</drawOffset>
+							<texPath>Buildings/DColumn_Overlay</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<shaderType>MoteGlow</shaderType>
+						</data>
+						<needsPower>true</needsPower>
+					</li>
+				</overlays>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(100, 30, 180, 0)</glowColor>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>100</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>deadlife dust</fuelLabel>
+				<fuelGizmoLabel>deadlife dust</fuelGizmoLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>15</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.99</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>0</minimumFueledThreshold>
+				<fuelMultiplier>1</fuelMultiplier>
+				<factorByDifficulty>false</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<outOfFuelMessage>Cannot detonate: Needs Bioferrite</outOfFuelMessage>
+				<fuelIconPath>Misc/Blank</fuelIconPath>
+			</li>
+		</comps>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</killedLeavings>
+		<pathCost>25</pathCost>
+		<passability>PassThroughOnly</passability>
+		<designationCategory>Security</designationCategory>
+		<rotatable>false</rotatable>
+		<stealable>false</stealable>
+		<building>
+			<combatPower>75</combatPower>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Gun_DeadColumn</turretGunDef>
+			<turretBurstCooldownTime>0.1</turretBurstCooldownTime>
+			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>DetColumnRes</li>
+			<li>DeadlifeDust</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<holdsRoof>true</holdsRoof>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>0.33</multiplier>
+			</li>
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>0.5</multiplier>
+			</li>
+		</damageMultipliers>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>Bullet_DeadColumn</defName>
+		<label>deadlife capsule</label>
+		<graphicData>
+			<texPath>Misc/Bullet_Dust</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.25</drawSize>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>DeadlifeDust</damageDef>
+			<speed>15</speed>
+			<explosionRadius>0.1</explosionRadius>
+			<flyOverhead>false</flyOverhead>
+			<soundExplode>ToxicShellLanded</soundExplode>
+			<postExplosionSpawnThingDef>Column_Deadlife_Releasing</postExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	
+  <ThingDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>Column_Deadlife_Releasing</defName>
+    <label>deadlife capsule</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>ThingWithComps</thingClass>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/LandedDeadlifeShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_ReleaseGas">
+        <gasType>DeadlifeDust</gasType>
+        <cellsToFill>4</cellsToFill>
+        <durationSeconds>10</durationSeconds>
+        <effecterReleasing>DeadlifeReleasing</effecterReleasing>
+      </li>
+      <li Class="CompProperties_DestroyAfterDelay">
+        <delayTicks>1800</delayTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>Gun_DeadColumn</defName>
+		<label>deadlife capsule</label>
+		<description>A simple automatic detonator.</description>
+		<graphicData>
+			<texPath>Misc/Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>1</AccuracyTouch>
+			<AccuracyShort>1</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>1</AccuracyLong>
+			<RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>Bullet_DeadColumn</defaultProjectile>
+				<warmupTime>5</warmupTime>
+				<range>2.8</range>
+				<burstShotCount>1</burstShotCount>
+				<forcedMissRadius>0.9</forcedMissRadius>
+				<soundCast>GunShotA</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>40</muzzleFlashScale>
+				<consumeFuelPerShot>15</consumeFuelPerShot>
+			</li>
+		</verbs>
+  </ThingDef>
+  
+
   
 
   <ThingDef ParentName="BuildingBase">
