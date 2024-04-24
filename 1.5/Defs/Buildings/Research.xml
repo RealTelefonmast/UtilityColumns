@@ -4,14 +4,14 @@
   <ResearchProjectDef>
     <defName>OrbitalTradeColumnRes</defName>
     <label>utility columns</label>
-    <description>Unlocks orbital, sun, frozen, sacred column.</description>
+    <description>Unlocks several utility columns.</description>
     <baseCost>2000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>Electricity</li>
     </prerequisites>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>2.1</researchViewY>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>6</researchViewY>
   </ResearchProjectDef>
 
 
@@ -19,13 +19,14 @@
     <defName>DetColumnRes</defName>
     <label>defence columns</label>
     <description>Unlocks the cluster columns for base defense.</description>
-    <baseCost>1500</baseCost>
+    <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
+	  <li>OrbitalTradeColumnRes</li>
       <li>Machining</li>
     </prerequisites>
-	<researchViewX>5.00</researchViewX>
-	<researchViewY>4.1</researchViewY>
+	<researchViewX>7.00</researchViewX>
+	<researchViewY>6</researchViewY>
   </ResearchProjectDef>
 
 
