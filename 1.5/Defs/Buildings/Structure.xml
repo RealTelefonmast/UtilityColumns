@@ -56,7 +56,7 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Glower">
-        <glowRadius>12</glowRadius>
+        <glowRadius>11.9</glowRadius>
         <glowColor>(214,148,94,0)</glowColor>
         <colorPickerEnabled>true</colorPickerEnabled>
         <darklightToggle>true</darklightToggle>
@@ -85,6 +85,10 @@
       <expandHomeArea>false</expandHomeArea>
 	  <ai_combatDangerous>false</ai_combatDangerous>
     </building>
+	<placeWorkers>
+		<li>PlaceWorker_GlowRadius</li>
+	</placeWorkers>
+	<specialDisplayRadius>6.9</specialDisplayRadius>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
@@ -150,7 +154,7 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Forbiddable"/>
 		<li Class="CompProperties_Glower">
-			<glowRadius>12</glowRadius>
+			<glowRadius>11.9</glowRadius>
 			<glowColor>(200,140,160,0)</glowColor>
 			<colorPickerEnabled>true</colorPickerEnabled>
 			<darklightToggle>true</darklightToggle>
@@ -179,6 +183,10 @@
       <expandHomeArea>false</expandHomeArea>
 	  <ai_combatDangerous>false</ai_combatDangerous>
     </building>
+	<placeWorkers>
+		<li>PlaceWorker_GlowRadius</li>
+	</placeWorkers>
+	<specialDisplayRadius>6.9</specialDisplayRadius>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
@@ -249,7 +257,7 @@
 			<basePowerConsumption>60</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Glower">
-			<glowRadius>12</glowRadius>
+			<glowRadius>11.9</glowRadius>
 			<glowColor>(217,217,208,0)</glowColor>
 			<darklightToggle>true</darklightToggle>
 		</li>
@@ -266,6 +274,7 @@
 	<stealable>false</stealable>
     <placeWorkers>
       <li>PlaceWorker_ShowTradeBeaconRadius</li>
+	  <li>PlaceWorker_GlowRadius</li>
     </placeWorkers>
     <building>
       <expandHomeArea>false</expandHomeArea>
@@ -340,7 +349,7 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Glower">
         <overlightRadius>8.5</overlightRadius>
-        <glowRadius>12.9</glowRadius>
+        <glowRadius>11.9</glowRadius>
         <glowColor>(250,250,250,0)</glowColor>
       </li>
       <li Class="CompProperties_Power">
@@ -380,6 +389,9 @@
       <expandHomeArea>false</expandHomeArea>
 	  <ai_combatDangerous>true</ai_combatDangerous>
     </building>
+    <placeWorkers>
+	  <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
 	  <li>AirConditioning</li>
@@ -447,7 +459,7 @@
 		</li>
       <li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Glower">
-			<glowRadius>12</glowRadius>
+			<glowRadius>11.9</glowRadius>
 			<glowColor>(125,125,225,0)</glowColor>
 			<darklightToggle>true</darklightToggle>
 		</li>
@@ -491,7 +503,8 @@
 	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
 	<placeWorkers>
       <li>RimWorldColumns.PlaceWorker_IceColumn</li>
-    </placeWorkers>    
+	  <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
 	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
@@ -542,7 +555,7 @@
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
-				<glowRadius>4</glowRadius>
+				<glowRadius>3.9</glowRadius>
 				<glowColor>(78, 226, 229, 0)</glowColor>
 			</li>
 			<li Class="CompProperties_Flickable"/>
@@ -589,7 +602,6 @@
 			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
 		</building>
 		<placeWorkers>
-			<li>PlaceWorker_TurretTop</li>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
@@ -708,7 +720,7 @@
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
-				<glowRadius>4</glowRadius>
+				<glowRadius>3.9</glowRadius>
 				<glowColor>(226, 150, 90, 0)</glowColor>
 			</li>
 			<li Class="CompProperties_Flickable"/>
@@ -755,7 +767,6 @@
 			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
 		</building>
 		<placeWorkers>
-			<li>PlaceWorker_TurretTop</li>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
@@ -877,7 +888,7 @@
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
-				<glowRadius>4</glowRadius>
+				<glowRadius>3.9</glowRadius>
 				<glowColor>(90, 150, 226, 0)</glowColor>
 			</li>
 			<li Class="CompProperties_Flickable"/>
@@ -924,7 +935,6 @@
 			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
 		</building>
 		<placeWorkers>
-			<li>PlaceWorker_TurretTop</li>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
@@ -1059,7 +1069,7 @@
 				</overlays>
 			</li>
 			<li Class="CompProperties_Glower">
-				<glowRadius>4</glowRadius>
+				<glowRadius>3.9</glowRadius>
 				<glowColor>(100, 30, 180, 0)</glowColor>
 			</li>
 			<li Class="CompProperties_Flickable"/>
@@ -1106,7 +1116,6 @@
 			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
 		</building>
 		<placeWorkers>
-			<li>PlaceWorker_TurretTop</li>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
@@ -1371,12 +1380,8 @@
 		</graphicData>
 		<uiIconPath>Buildings/ArchoColumn/ArchoColumnIcon</uiIconPath>
 		<altitudeLayer>Building</altitudeLayer>
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<thingCategories>
-			<li>BuildingsMisc</li>
-		</thingCategories>
 		<statBases>
-			<MarketValue>15000</MarketValue>
+			<MarketValue>12000</MarketValue>
 			<MaxHitPoints>750</MaxHitPoints>
 			<WorkToBuild>30000</WorkToBuild>
 			<Flammability>0</Flammability>
@@ -1388,11 +1393,6 @@
 		<size>(3,3)</size>
 		<fillPercent>0.25</fillPercent>
 		<specialDisplayRadius>3.9</specialDisplayRadius>
-		<costList>
-			<ComponentArchoDrone>1</ComponentArchoDrone>
-			<ComponentSpacer>5</ComponentSpacer>
-			<Plasteel>100</Plasteel>
-		</costList>
 		<comps>
 			<li Class="RimWorldColumns.CompProperties_Overlays">
 				<overlays>
@@ -1445,7 +1445,7 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Glower">
-				<glowRadius>12</glowRadius>
+				<glowRadius>11.9</glowRadius>
 				<glowColor>(217,217,208,1)</glowColor>
 				<colorPickerEnabled>true</colorPickerEnabled>
 				<darklightToggle>true</darklightToggle>				
@@ -1457,55 +1457,82 @@
 		      </li>
 		</comps>
 		<tickerType>Normal</tickerType>
-		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-		<killedLeavings>
-			<ComponentArchoDrone>1</ComponentArchoDrone>
-		</killedLeavings>
 		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
-		<designationCategory>Misc</designationCategory>
 		<rotatable>false</rotatable>
 		<stealable>true</stealable>
 		<building>
 			<expandHomeArea>false</expandHomeArea>
 			<ai_combatDangerous>true</ai_combatDangerous>
 		</building>
-		<researchPrerequisites>
-			<li>OrbitalTradeColumnRes</li>
-			<li>Fabrication</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<holdsRoof>true</holdsRoof>
 		<canOverlapZones>true</canOverlapZones>
 		<fertility>0</fertility>
-		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 	</ThingDef>
+	
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Grenade_ArchoDrone</defName>
+    <label>archo cube</label> 
+    <thingClass>Projectile_SpawnsThing</thingClass>
+    <graphicData>
+      <texPath>Buildings/ArchoColumn/ArchoDroneIcon</texPath>
+	  <drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>3.9</explosionRadius> <!-- Must be kept in sync with range of Gun_TacticalTurret -->
+      <speed>31</speed>
+      <spawnsThingDef>ArchotechDroneColumn</spawnsThingDef>
+    </projectile>
+  </ThingDef>
 
-
-	<ThingDef ParentName="ResourceBase">
+	<ThingDef ParentName="OrbitalUtilityBase">
 		<defName>ComponentArchoDrone</defName>
 		<label>archo cube</label>
-		<thingClass>ThingWithComps</thingClass>
 		<description>A archotech cube. Installed in a proper support structure, it can become a mind of special power.</description>
 		<graphicData>
 			<texPath>Buildings/ArchoColumn/ArchoDroneIcon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<resourceReadoutPriority>Middle</resourceReadoutPriority>
-		<stackLimit>1</stackLimit>
+		<apparel>
+			<ai_pickUpOpportunistically>true</ai_pickUpOpportunistically>
+			<wornGraphicPath>Buildings/ArchoColumn/ArchoDroneIcon</wornGraphicPath>
+			<wornGraphicData>
+			<renderUtilityAsPack>true</renderUtilityAsPack>
+			<north>
+				<male>  <offset>(0.25, -0.25)</offset> </male>
+				<female><offset>(0.25,-0.25)</offset> </female>
+				<thin>  <offset>(0.15,-0.25)</offset> </thin>
+				<hulk>  <offset>(0.25,-0.3)</offset> </hulk>
+				<fat>   <offset>(0.45,-0.25)</offset> </fat>
+			</north>
+			<south>
+				<male>  <offset>(-0.3, -0.25)</offset> </male>
+				<female><offset>(-0.3,-0.25)</offset> </female>
+				<thin>  <offset>(-0.2,-0.25)</offset> </thin>
+				<hulk>  <offset>(-0.3,-0.3)</offset> </hulk>
+				<fat>   <offset>(-0.5,-0.25)</offset> </fat>
+			</south>
+			<east>
+				<offset>(-0.05,-0.3)</offset>
+			</east>
+			<male>  <scale>(0.6,0.6)</scale> </male>
+			<female><scale>(0.6,0.6)</scale> </female>
+			<thin>  <scale>(0.6,0.6)</scale> </thin>
+			<hulk>  <scale>(0.6,0.6)</scale> </hulk>
+			<fat>   <scale>(0.6,0.6)</scale> </fat>
+			</wornGraphicData>
+		</apparel>
 		<useHitPoints>true</useHitPoints>
 		<statBases>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>5.0</Mass>
 			<Flammability>0</Flammability>
-			<Beauty>150</Beauty>
+			<Beauty>10</Beauty>
 		</statBases>
-		<thingCategories>
-			<li>Items</li>
-		</thingCategories>
 		<tradeability>Sellable</tradeability>
-		<techLevel>Ultra</techLevel>
 		<tradeTags>
 			<li>ExoticMisc</li>
 		</tradeTags>
@@ -1513,6 +1540,35 @@
 		<thingSetMakerTags>
 			<li>RewardStandardCore</li>
 		</thingSetMakerTags>
+		<comps>
+		  <li Class="CompProperties_ApparelVerbOwnerCharged">
+			<hotKey>Misc4</hotKey>
+			<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+			<maxCharges>1</maxCharges>
+			<destroyOnEmpty>true</destroyOnEmpty>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<verbClass>Verb_LaunchProjectileStaticOneUse</verbClass>
+			<label>deploy archo column</label>
+			<defaultProjectile>Grenade_ArchoDrone</defaultProjectile>
+			<warmupTime>1.0</warmupTime>
+			<range>6.9</range>
+			<burstShotCount>1</burstShotCount>
+			<onlyManualCast>true</onlyManualCast>
+			<hasStandardCommand>true</hasStandardCommand>
+			<targetable>true</targetable>
+			<targetParams>
+			  <canTargetPawns>false</canTargetPawns>
+			  <canTargetBuildings>false</canTargetBuildings>
+			  <canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<soundCast>ThrowGrenade</soundCast>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			<canGoWild>false</canGoWild>
+		  </li>
+		</verbs>
 	</ThingDef>
 
 
