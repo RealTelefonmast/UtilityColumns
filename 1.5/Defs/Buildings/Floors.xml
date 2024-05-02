@@ -4,14 +4,14 @@
 	<TerrainDef ParentName="FloorBase">
 		<defName>UCStripedFloor</defName>
 		<label>Warning floor</label>
-		<description>A metal scaffold flooring with a warning pattern on it. It is used to emphasize dangerous or important things.</description>
+		<description>A metal scaffold flooring with warning patterns. It is used to emphasize dangerous or important things.</description>
 		<texturePath>Floor/Stripedpattern</texturePath>
 		<renderPrecedence>240</renderPrecedence>
 		<isPaintable>true</isPaintable>
 		<statBases>
 			<Beauty>-1</Beauty>
-			<WorkToBuild>1000</WorkToBuild>
-			<CleaningTimeFactor>0.6</CleaningTimeFactor>
+			<WorkToBuild>800</WorkToBuild>
+			<CleaningTimeFactor>0.8</CleaningTimeFactor>
 			<ContainmentStrength MayRequire="Ludeon.RimWorld.Anomaly">10</ContainmentStrength>
 		</statBases>
 		<costList>
@@ -30,7 +30,7 @@
 	<TerrainDef ParentName="FloorBase">
 		<defName>UCScaffoldFloor</defName>
 		<label>Scaffold floor</label>
-		<description>A metal scaffold flooring with a dense hole pattern. They are does not get dirty easily and quick to clean.</description>
+		<description>A metal scaffold flooring with dense holes. They are does not get dirty easily and quick to clean.</description>
 		<texturePath>Floor/Scaffold</texturePath>
 		<renderPrecedence>240</renderPrecedence>
 		<isPaintable>true</isPaintable>
@@ -47,7 +47,7 @@
 		<edgeType>Hard</edgeType>
 		<color>(180,170,150)</color>
 		<researchPrerequisites>
-			<li>OrbitalTradeColumnRes</li>
+			<li>DetColumnRes</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -57,7 +57,7 @@
 	<TerrainDef ParentName="FloorBase">
 		<defName>UCScaffoldTile</defName>
 		<label>Scaffold Tile</label>
-		<description>A metal scaffold tile with a dense hole pattern. They are does not get dirty easily and quick to clean.</description>
+		<description>A metal scaffold tile with dense holes. They are does not get dirty easily and quick to clean.</description>
 		<texturePath>Floor/ScaffoldTile</texturePath>
 		<renderPrecedence>240</renderPrecedence>
 		<isPaintable>true</isPaintable>
@@ -74,7 +74,7 @@
 		<edgeType>Hard</edgeType>
 		<color>(180,170,150)</color>
 		<researchPrerequisites>
-			<li>OrbitalTradeColumnRes</li>
+			<li>DetColumnRes</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<constructEffect>ConstructMetal</constructEffect>

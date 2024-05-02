@@ -550,8 +550,8 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>150</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>75</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -587,9 +587,8 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
 		</killedLeavings>
-		<pathCost>25</pathCost>
+		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
 		<designationCategory>Security</designationCategory>
 		<rotatable>false</rotatable>
@@ -635,7 +634,7 @@
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<damageAmountBase>45</damageAmountBase>
+			<damageAmountBase>50</damageAmountBase>
 			<armorPenetrationBase>0.5</armorPenetrationBase>
 			<speed>80</speed>
 			<explosionRadius>3.9</explosionRadius>
@@ -673,6 +672,7 @@
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>30</muzzleFlashScale>
 				<consumeFuelPerShot>25</consumeFuelPerShot>
+				<ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
 			</li>
 		</verbs>
   </ThingDef>
@@ -714,8 +714,8 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>100</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<Chemfuel>25</Chemfuel>
 		</costList>
 		<comps>
@@ -752,9 +752,8 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
 		</killedLeavings>
-		<pathCost>25</pathCost>
+		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
 		<designationCategory>Security</designationCategory>
 		<rotatable>false</rotatable>
@@ -801,7 +800,7 @@
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<damageDef>Flame</damageDef>
-			<damageAmountBase>20</damageAmountBase>
+			<damageAmountBase>25</damageAmountBase>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<speed>80</speed>
 			<explosionRadius>3.9</explosionRadius>
@@ -841,6 +840,7 @@
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>30</muzzleFlashScale>
 				<consumeFuelPerShot>25</consumeFuelPerShot>
+				<ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
 			</li>
 		</verbs>
   </ThingDef>
@@ -883,8 +883,8 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>150</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>75</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -920,9 +920,8 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
 		</killedLeavings>
-		<pathCost>25</pathCost>
+		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
 		<designationCategory>Security</designationCategory>
 		<rotatable>false</rotatable>
@@ -1006,6 +1005,7 @@
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>30</muzzleFlashScale>
 				<consumeFuelPerShot>1</consumeFuelPerShot>
+				<ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
 			</li>
 		</verbs>
   </ThingDef>
@@ -1049,9 +1049,9 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<fillPercent>0.25</fillPercent>
 		<costList>
-			<Steel>150</Steel>
+			<Steel>75</Steel>
 			<Bioferrite>15</Bioferrite>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps>
 			<li Class="RimWorldColumns.CompProperties_Overlays">
@@ -1101,9 +1101,8 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
 		</killedLeavings>
-		<pathCost>25</pathCost>
+		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
 		<designationCategory>Security</designationCategory>
 		<rotatable>false</rotatable>
@@ -1173,8 +1172,8 @@
     <comps>
       <li Class="CompProperties_ReleaseGas">
         <gasType>DeadlifeDust</gasType>
-        <cellsToFill>4</cellsToFill>
-        <durationSeconds>10</durationSeconds>
+        <cellsToFill>5</cellsToFill>
+        <durationSeconds>12</durationSeconds>
         <effecterReleasing>DeadlifeReleasing</effecterReleasing>
       </li>
       <li Class="CompProperties_DestroyAfterDelay">
@@ -1213,6 +1212,7 @@
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>40</muzzleFlashScale>
 				<consumeFuelPerShot>15</consumeFuelPerShot>
+				<ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
 			</li>
 		</verbs>
   </ThingDef>
@@ -1227,7 +1227,7 @@
     <thingClass>Building_Sarcophagus</thingClass>
     <graphicData>
 			<drawSize>(3,3)</drawSize>
-			<drawOffset>(0,0,0.05)</drawOffset>
+			<drawOffset>(0,0,0.25)</drawOffset>
 			<texPath>Buildings/GraColumn_Base</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
@@ -1250,7 +1250,7 @@
       <haulToContainerDuration>750</haulToContainerDuration>
       <fullGraveGraphicData>
 			<drawSize>(3,3)</drawSize>
-			<drawOffset>(0,0,0.05)</drawOffset>
+			<drawOffset>(0,0,0.25)</drawOffset>
 			<texPath>Buildings/GraColumn_Overlay</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<damageData>
@@ -1341,7 +1341,7 @@
       </li>
     </comps>
     <costStuffCount>150</costStuffCount>
-	<pathCost>25</pathCost>
+	<pathCost>75</pathCost>
 	<passability>PassThroughOnly</passability>
 	<designationCategory>Misc</designationCategory>
     <rotatable>false</rotatable>
@@ -1383,10 +1383,9 @@
 		<statBases>
 			<MarketValue>12000</MarketValue>
 			<MaxHitPoints>750</MaxHitPoints>
-			<WorkToBuild>30000</WorkToBuild>
 			<Flammability>0</Flammability>
-			<Mass>25</Mass>
-			<Beauty>250</Beauty>
+			<Mass>500</Mass>
+			<Beauty>500</Beauty>
 		</statBases>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
@@ -1457,7 +1456,7 @@
 		      </li>
 		</comps>
 		<tickerType>Normal</tickerType>
-		<pathCost>50</pathCost>
+		<pathCost>75</pathCost>
 		<passability>PassThroughOnly</passability>
 		<rotatable>false</rotatable>
 		<stealable>true</stealable>
@@ -1481,22 +1480,24 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <explosionRadius>3.9</explosionRadius> <!-- Must be kept in sync with range of Gun_TacticalTurret -->
-      <speed>31</speed>
-      <spawnsThingDef>ArchotechDroneColumn</spawnsThingDef>
+		<explosionRadius>3.9</explosionRadius>
+		<speed>20</speed>
+		<spawnsThingDef>ArchotechDroneColumn</spawnsThingDef>
+		<arcHeightFactor>0.75</arcHeightFactor>
+		<shadowSize>0.4</shadowSize>
     </projectile>
   </ThingDef>
 
 	<ThingDef ParentName="OrbitalUtilityBase">
 		<defName>ComponentArchoDrone</defName>
 		<label>archo cube</label>
-		<description>A archotech cube. Installed in a proper support structure, it can become a mind of special power.</description>
+		<description>A archotech cube. Installed in a proper support structure, it can become a mind of special power. Pick up and throw it wherever you want.</description>
 		<graphicData>
 			<texPath>Buildings/ArchoColumn/ArchoDroneIcon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<apparel>
-			<ai_pickUpOpportunistically>true</ai_pickUpOpportunistically>
+			<ai_pickUpOpportunistically>false</ai_pickUpOpportunistically>
 			<wornGraphicPath>Buildings/ArchoColumn/ArchoDroneIcon</wornGraphicPath>
 			<wornGraphicData>
 			<renderUtilityAsPack>true</renderUtilityAsPack>
@@ -1528,7 +1529,7 @@
 		<statBases>
 			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
-			<Mass>5.0</Mass>
+			<Mass>2.0</Mass>
 			<Flammability>0</Flammability>
 			<Beauty>10</Beauty>
 		</statBases>
