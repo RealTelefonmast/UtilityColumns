@@ -15,14 +15,14 @@
 			<ContainmentStrength MayRequire="Ludeon.RimWorld.Anomaly">10</ContainmentStrength>
 		</statBases>
 		<costList>
-			<Steel>8</Steel>
+			<Steel>6</Steel>
 		</costList>
 		<edgeType>Hard</edgeType>
 		<color>(205,190,45)</color>
 		<researchPrerequisites>
 			<li>DetColumnRes</li>
 		</researchPrerequisites>
-		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<constructEffect>ConstructMetal</constructEffect>
 		<uiOrder>4100</uiOrder>
 	</TerrainDef>
@@ -36,13 +36,13 @@
 		<isPaintable>true</isPaintable>
 		<statBases>
 			<Beauty>1</Beauty>
-			<WorkToBuild>1000</WorkToBuild>
+			<WorkToBuild>800</WorkToBuild>
 			<CleaningTimeFactor>0.8</CleaningTimeFactor>
 			<FilthMultiplier>0.8</FilthMultiplier>
 			<ContainmentStrength MayRequire="Ludeon.RimWorld.Anomaly">5</ContainmentStrength>
 		</statBases>
 		<costList>
-			<Steel>10</Steel>
+			<Steel>6</Steel>
 		</costList>
 		<edgeType>Hard</edgeType>
 		<color>(180,170,150)</color>
@@ -63,13 +63,13 @@
 		<isPaintable>true</isPaintable>
 		<statBases>
 			<Beauty>1</Beauty>
-			<WorkToBuild>1200</WorkToBuild>
+			<WorkToBuild>1000</WorkToBuild>
 			<CleaningTimeFactor>0.7</CleaningTimeFactor>
 			<FilthMultiplier>0.7</FilthMultiplier>
 			<ContainmentStrength MayRequire="Ludeon.RimWorld.Anomaly">5</ContainmentStrength>
 		</statBases>
 		<costList>
-			<Steel>12</Steel>
+			<Steel>8</Steel>
 		</costList>
 		<edgeType>Hard</edgeType>
 		<color>(180,170,150)</color>

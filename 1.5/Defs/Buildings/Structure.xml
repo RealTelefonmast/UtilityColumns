@@ -1205,7 +1205,7 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<defaultProjectile>Bullet_DeadColumn</defaultProjectile>
 				<warmupTime>5</warmupTime>
-				<range>2.8</range>
+				<range>3.9</range>
 				<burstShotCount>1</burstShotCount>
 				<forcedMissRadius>0.9</forcedMissRadius>
 				<soundCast>GunShotA</soundCast>
@@ -1382,11 +1382,15 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<statBases>
 			<MarketValue>12000</MarketValue>
+			<WorkToBuild>4000</WorkToBuild>
 			<MaxHitPoints>750</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>500</Mass>
 			<Beauty>500</Beauty>
 		</statBases>
+		<costList>
+			<Gold>400</Gold>
+		</costList>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<size>(3,3)</size>
@@ -1436,13 +1440,6 @@
 				<outOfFuelMessage>Cannot restoration: Needs plasteel</outOfFuelMessage>
 				<fuelIconPath>Misc/NeedMaterial</fuelIconPath>
 			</li>
-			<li Class="CompProperties_MoteEmitter" MayRequire="Ludeon.RimWorld.Ideology">
-				<mote>Mote_PsychicConditionCauserEffect</mote>
-				<emissionInterval>7200</emissionInterval>
-				<soundOnEmission>Archonexus_Throb</soundOnEmission>
-			</li>
-			<li Class="CompProperties_Flickable"/>
-			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Glower">
 				<glowRadius>11.9</glowRadius>
 				<glowColor>(217,217,208,1)</glowColor>
@@ -1454,6 +1451,38 @@
 				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
 		        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
 		      </li>
+			  <li Class="CompProperties_SpawnSubplant" MayRequire="Ludeon.RimWorld.Royalty">
+				<compClass>CompSpawnImmortalSubplantsAround</compClass>
+				<subplant>Plant_TreeAnima</subplant>
+				<maxRadius>5</maxRadius>
+				<dontWipePlant>Plant_GrassAnima</dontWipePlant>
+				<chanceOverDistance>
+				  <points>
+					<li>(0,  0)</li>
+					<li>(1,  0)</li>
+					<li>(2,  0.01)</li>
+					<li>(3, 0.15)</li>
+					<li>(5, 0)</li>
+				  </points>
+				</chanceOverDistance>
+				<saveKeysPrefix>tree</saveKeysPrefix>
+			  </li>
+			  <li Class="CompProperties_SpawnSubplant" MayRequire="Ludeon.RimWorld.Royalty">
+				<compClass>CompSpawnImmortalSubplantsAround</compClass>
+				<subplant>Plant_GrassAnima</subplant>
+				<maxRadius>9</maxRadius>
+				<dontWipePlant>Plant_TreeAnima</dontWipePlant>
+				<chanceOverDistance>
+				  <points>
+					<li>(0,  0)</li>
+					<li>(1,  0)</li>
+					<li>(2,  0.01)</li>
+					<li>(5, 0.7)</li>
+					<li>(9, 0)</li>
+				  </points>
+				</chanceOverDistance>
+				<saveKeysPrefix>grass</saveKeysPrefix>
+			  </li>
 		</comps>
 		<tickerType>Normal</tickerType>
 		<pathCost>75</pathCost>
@@ -1463,6 +1492,7 @@
 		<building>
 			<expandHomeArea>false</expandHomeArea>
 			<ai_combatDangerous>true</ai_combatDangerous>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
 		</building>
 		<holdsRoof>true</holdsRoof>
 		<canOverlapZones>true</canOverlapZones>
